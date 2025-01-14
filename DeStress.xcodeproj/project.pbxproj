@@ -7,22 +7,133 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A009CAFC2C335131001CEB05 /* Gratitude&GoalsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009CAFB2C335131001CEB05 /* Gratitude&GoalsVM.swift */; };
+		A009CAFE2C3351A9001CEB05 /* Gratitude&GoalsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009CAFD2C3351A9001CEB05 /* Gratitude&GoalsModel.swift */; };
+		A009CB002C335202001CEB05 /* GratitudeGoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009CAFF2C335202001CEB05 /* GratitudeGoalsView.swift */; };
+		A00CFBC52C0A7E2B0088BA56 /* GlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00CFBC42C0A7E2B0088BA56 /* GlowView.swift */; };
 		A0149EDC2C07C83700567BAE /* DeStressApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0149EDB2C07C83700567BAE /* DeStressApp.swift */; };
 		A0149EDE2C07C83700567BAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0149EDD2C07C83700567BAE /* ContentView.swift */; };
 		A0149EE02C07C83800567BAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0149EDF2C07C83800567BAE /* Assets.xcassets */; };
 		A0149EE32C07C83800567BAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0149EE22C07C83800567BAE /* Preview Assets.xcassets */; };
+		A0149EEA2C07C87E00567BAE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0149EE92C07C87E00567BAE /* HomeView.swift */; };
+		A0149EEC2C07C8BC00567BAE /* BreathingExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0149EEB2C07C8BC00567BAE /* BreathingExerciseView.swift */; };
+		A0149EEE2C07C9DE00567BAE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0149EED2C07C9DE00567BAE /* SettingsView.swift */; };
+		A0149EF02C07CA3800567BAE /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0149EEF2C07CA3800567BAE /* ProgressView.swift */; };
+		A0149EF22C07CAFD00567BAE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0149EF12C07CAFD00567BAE /* Notifications.swift */; };
+		A02844102C41936200542E31 /* BreathingSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028440F2C41936200542E31 /* BreathingSettingsModel.swift */; };
+		A02844122C41C3D700542E31 /* RippleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02844112C41C3D700542E31 /* RippleEffect.swift */; };
+		A032C9FC2C35B8DC0094DB07 /* MetalShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = A032C9FB2C35B8DC0094DB07 /* MetalShader.metal */; };
+		A032C9FF2C35BFE40094DB07 /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = A032C9FE2C35BFE40094DB07 /* Vortex */; };
+		A037D6072C46C7D40087A812 /* DeStressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037D6062C46C7D40087A812 /* DeStressButton.swift */; };
+		A044D5922C8BA6CF00B323E0 /* ButeykoBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044D5912C8BA6CF00B323E0 /* ButeykoBreathingView.swift */; };
+		A0533F0F2C6BABA900F5326A /* FourSevenEightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0533F0E2C6BABA900F5326A /* FourSevenEightDetailView.swift */; };
+		A06E2E3B2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06E2E3A2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift */; };
+		A074F0812CEA348500DE1019 /* BreathingExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074F0802CEA348500DE1019 /* BreathingExerciseViewModel.swift */; };
+		A074F0832CEA388A00DE1019 /* BreathingExerciseViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074F0822CEA388A00DE1019 /* BreathingExerciseViewTests.swift */; };
+		A096BDA02D0BAC7E004414F9 /* DeStressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096BD9F2D0BAC7E004414F9 /* DeStressUITests.swift */; };
+		A096BDA22D0BAC7E004414F9 /* DeStressUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096BDA12D0BAC7E004414F9 /* DeStressUITestsLaunchTests.swift */; };
+		A096BDA92D0BADA0004414F9 /* FourSevenEightBreathing_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096BDA82D0BADA0004414F9 /* FourSevenEightBreathing_UITests.swift */; };
+		A09A3B302C5ACDBC004613C2 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09A3B2F2C5ACDBC004613C2 /* HealthKitManager.swift */; };
+		A0ABF52A2C6A758A0074B8E1 /* BoxBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0ABF5292C6A758A0074B8E1 /* BoxBreathingView.swift */; };
+		A0BB63A82CE3DB3A00193B1C /* DeStressTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB63A72CE3DB3A00193B1C /* DeStressTests.swift */; };
+		A0BB63AF2CE3DB4C00193B1C /* FourSevenEightBreathingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BB63AE2CE3DB4C00193B1C /* FourSevenEightBreathingViewTests.swift */; };
+		A0DB9A052D3132E100534BA3 /* BoxBreathingViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB9A042D3132E100534BA3 /* BoxBreathingViewUITests.swift */; };
+		A0DB9A072D314E1C00534BA3 /* BreathingStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB9A062D314E1C00534BA3 /* BreathingStatistic.swift */; };
+		A0DD899F2CDD6A0D00E0AC0D /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD899E2CDD6A0D00E0AC0D /* Extension+String.swift */; };
+		A0E746B52D36A40600799CBF /* GoalItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E746B42D36A40600799CBF /* GoalItemView.swift */; };
+		A0F875162CE941C2005CF3B5 /* FourSevenEightBreathingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F875152CE941C2005CF3B5 /* FourSevenEightBreathingViewModel.swift */; };
+		A0F875192CE94A51005CF3B5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F875182CE94A51005CF3B5 /* DetailView.swift */; };
+		A0F8751B2CE94C7C005CF3B5 /* BoxBreathingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F8751A2CE94C7C005CF3B5 /* BoxBreathingViewModel.swift */; };
+		A0F8751D2CE94D3C005CF3B5 /* BoxBreathingViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F8751C2CE94D3C005CF3B5 /* BoxBreathingViewTests.swift */; };
+		A0F8751F2CE94DC2005CF3B5 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F8751E2CE94DC2005CF3B5 /* StatisticsView.swift */; };
+		A0F875222CE9507B005CF3B5 /* ButeykoBreathingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F875212CE9507B005CF3B5 /* ButeykoBreathingViewModel.swift */; };
+		A0F875242CE950D9005CF3B5 /* ButeykoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F875232CE950D9005CF3B5 /* ButeykoDetailView.swift */; };
+		A0F875262CE9518D005CF3B5 /* ButeykoBreathingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F875252CE9518D005CF3B5 /* ButeykoBreathingViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A096BDA32D0BAC7E004414F9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0149ED02C07C83700567BAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0149ED72C07C83700567BAE;
+			remoteInfo = DeStress;
+		};
+		A0BB63A92CE3DB3A00193B1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0149ED02C07C83700567BAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0149ED72C07C83700567BAE;
+			remoteInfo = DeStress;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A009CAFB2C335131001CEB05 /* Gratitude&GoalsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gratitude&GoalsVM.swift"; sourceTree = "<group>"; };
+		A009CAFD2C3351A9001CEB05 /* Gratitude&GoalsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gratitude&GoalsModel.swift"; sourceTree = "<group>"; };
+		A009CAFF2C335202001CEB05 /* GratitudeGoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeGoalsView.swift; sourceTree = "<group>"; };
+		A00CFBC42C0A7E2B0088BA56 /* GlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlowView.swift; sourceTree = "<group>"; };
+		A00E3B912C5D692F00D827CC /* DeStress.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DeStress.entitlements; sourceTree = "<group>"; };
 		A0149ED82C07C83700567BAE /* DeStress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeStress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0149EDB2C07C83700567BAE /* DeStressApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeStressApp.swift; sourceTree = "<group>"; };
 		A0149EDD2C07C83700567BAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0149EDF2C07C83800567BAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0149EE22C07C83800567BAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0149EE92C07C87E00567BAE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		A0149EEB2C07C8BC00567BAE /* BreathingExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseView.swift; sourceTree = "<group>"; };
+		A0149EED2C07C9DE00567BAE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		A0149EEF2C07CA3800567BAE /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		A0149EF12C07CAFD00567BAE /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		A028440F2C41936200542E31 /* BreathingSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSettingsModel.swift; sourceTree = "<group>"; };
+		A02844112C41C3D700542E31 /* RippleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleEffect.swift; sourceTree = "<group>"; };
+		A032C9FB2C35B8DC0094DB07 /* MetalShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MetalShader.metal; sourceTree = "<group>"; };
+		A037D6062C46C7D40087A812 /* DeStressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeStressButton.swift; sourceTree = "<group>"; };
+		A044D5912C8BA6CF00B323E0 /* ButeykoBreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButeykoBreathingView.swift; sourceTree = "<group>"; };
+		A0533F0E2C6BABA900F5326A /* FourSevenEightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightDetailView.swift; sourceTree = "<group>"; };
+		A06E2E3A2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightBreathingView.swift; sourceTree = "<group>"; };
+		A074F0802CEA348500DE1019 /* BreathingExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseViewModel.swift; sourceTree = "<group>"; };
+		A074F0822CEA388A00DE1019 /* BreathingExerciseViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseViewTests.swift; sourceTree = "<group>"; };
+		A096BD9D2D0BAC7E004414F9 /* DeStressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeStressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A096BD9F2D0BAC7E004414F9 /* DeStressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeStressUITests.swift; sourceTree = "<group>"; };
+		A096BDA12D0BAC7E004414F9 /* DeStressUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeStressUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A096BDA82D0BADA0004414F9 /* FourSevenEightBreathing_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightBreathing_UITests.swift; sourceTree = "<group>"; };
+		A09A3B2F2C5ACDBC004613C2 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		A09A3B312C5AD33B004613C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A0ABF5292C6A758A0074B8E1 /* BoxBreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxBreathingView.swift; sourceTree = "<group>"; };
+		A0BB63A52CE3DB3A00193B1C /* DeStressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeStressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0BB63A72CE3DB3A00193B1C /* DeStressTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeStressTests.swift; sourceTree = "<group>"; };
+		A0BB63AE2CE3DB4C00193B1C /* FourSevenEightBreathingViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightBreathingViewTests.swift; sourceTree = "<group>"; };
+		A0DB9A042D3132E100534BA3 /* BoxBreathingViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxBreathingViewUITests.swift; sourceTree = "<group>"; };
+		A0DB9A062D314E1C00534BA3 /* BreathingStatistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingStatistic.swift; sourceTree = "<group>"; };
+		A0DD899E2CDD6A0D00E0AC0D /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		A0E746B42D36A40600799CBF /* GoalItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalItemView.swift; sourceTree = "<group>"; };
+		A0F875152CE941C2005CF3B5 /* FourSevenEightBreathingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightBreathingViewModel.swift; sourceTree = "<group>"; };
+		A0F875182CE94A51005CF3B5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		A0F8751A2CE94C7C005CF3B5 /* BoxBreathingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxBreathingViewModel.swift; sourceTree = "<group>"; };
+		A0F8751C2CE94D3C005CF3B5 /* BoxBreathingViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxBreathingViewTests.swift; sourceTree = "<group>"; };
+		A0F8751E2CE94DC2005CF3B5 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		A0F875212CE9507B005CF3B5 /* ButeykoBreathingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButeykoBreathingViewModel.swift; sourceTree = "<group>"; };
+		A0F875232CE950D9005CF3B5 /* ButeykoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButeykoDetailView.swift; sourceTree = "<group>"; };
+		A0F875252CE9518D005CF3B5 /* ButeykoBreathingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButeykoBreathingViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		A0149ED52C07C83700567BAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A032C9FF2C35BFE40094DB07 /* Vortex in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A096BD9A2D0BAC7E004414F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0BB63A22CE3DB3A00193B1C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,10 +143,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A009CAFA2C33510B001CEB05 /* Gratitude&Goals */ = {
+			isa = PBXGroup;
+			children = (
+				A009CAFD2C3351A9001CEB05 /* Gratitude&GoalsModel.swift */,
+				A009CAFB2C335131001CEB05 /* Gratitude&GoalsVM.swift */,
+				A009CAFF2C335202001CEB05 /* GratitudeGoalsView.swift */,
+				A0E746B42D36A40600799CBF /* GoalItemView.swift */,
+			);
+			path = "Gratitude&Goals";
+			sourceTree = "<group>";
+		};
+		A00CFBC32C0A7CBB0088BA56 /* Breathing */ = {
+			isa = PBXGroup;
+			children = (
+				A0F875202CE94FC3005CF3B5 /* ButeykoBreathingView */,
+				A0F875172CE9484E005CF3B5 /* Boxbreathing */,
+				A0533F102C6BB05100F5326A /* CoreBreathing */,
+				A00CFBC42C0A7E2B0088BA56 /* GlowView.swift */,
+				A037D6062C46C7D40087A812 /* DeStressButton.swift */,
+				A09A3B2F2C5ACDBC004613C2 /* HealthKitManager.swift */,
+				A0F875142CE9417E005CF3B5 /* FourSevenEightView */,
+			);
+			path = Breathing;
+			sourceTree = "<group>";
+		};
 		A0149ECF2C07C83700567BAE = {
 			isa = PBXGroup;
 			children = (
 				A0149EDA2C07C83700567BAE /* DeStress */,
+				A0BB63A62CE3DB3A00193B1C /* DeStressTests */,
+				A096BD9E2D0BAC7E004414F9 /* DeStressUITests */,
 				A0149ED92C07C83700567BAE /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,6 +182,8 @@
 			isa = PBXGroup;
 			children = (
 				A0149ED82C07C83700567BAE /* DeStress.app */,
+				A0BB63A52CE3DB3A00193B1C /* DeStressTests.xctest */,
+				A096BD9D2D0BAC7E004414F9 /* DeStressUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,10 +191,19 @@
 		A0149EDA2C07C83700567BAE /* DeStress */ = {
 			isa = PBXGroup;
 			children = (
+				A00E3B912C5D692F00D827CC /* DeStress.entitlements */,
+				A09A3B312C5AD33B004613C2 /* Info.plist */,
 				A0149EDB2C07C83700567BAE /* DeStressApp.swift */,
 				A0149EDD2C07C83700567BAE /* ContentView.swift */,
+				A009CAFA2C33510B001CEB05 /* Gratitude&Goals */,
+				A0149EE92C07C87E00567BAE /* HomeView.swift */,
+				A0149EEF2C07CA3800567BAE /* ProgressView.swift */,
+				A0149EF12C07CAFD00567BAE /* Notifications.swift */,
+				A00CFBC32C0A7CBB0088BA56 /* Breathing */,
 				A0149EDF2C07C83800567BAE /* Assets.xcassets */,
+				A0DD899D2CDD69ED00E0AC0D /* Helpers */,
 				A0149EE12C07C83800567BAE /* Preview Content */,
+				A032C9FB2C35B8DC0094DB07 /* MetalShader.metal */,
 			);
 			path = DeStress;
 			sourceTree = "<group>";
@@ -65,6 +214,81 @@
 				A0149EE22C07C83800567BAE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A0533F102C6BB05100F5326A /* CoreBreathing */ = {
+			isa = PBXGroup;
+			children = (
+				A0149EED2C07C9DE00567BAE /* SettingsView.swift */,
+				A028440F2C41936200542E31 /* BreathingSettingsModel.swift */,
+				A02844112C41C3D700542E31 /* RippleEffect.swift */,
+				A0149EEB2C07C8BC00567BAE /* BreathingExerciseView.swift */,
+				A074F0802CEA348500DE1019 /* BreathingExerciseViewModel.swift */,
+			);
+			path = CoreBreathing;
+			sourceTree = "<group>";
+		};
+		A096BD9E2D0BAC7E004414F9 /* DeStressUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A096BD9F2D0BAC7E004414F9 /* DeStressUITests.swift */,
+				A096BDA12D0BAC7E004414F9 /* DeStressUITestsLaunchTests.swift */,
+				A096BDA82D0BADA0004414F9 /* FourSevenEightBreathing_UITests.swift */,
+				A0DB9A042D3132E100534BA3 /* BoxBreathingViewUITests.swift */,
+			);
+			path = DeStressUITests;
+			sourceTree = "<group>";
+		};
+		A0BB63A62CE3DB3A00193B1C /* DeStressTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0BB63A72CE3DB3A00193B1C /* DeStressTests.swift */,
+				A0BB63AE2CE3DB4C00193B1C /* FourSevenEightBreathingViewTests.swift */,
+				A0F8751C2CE94D3C005CF3B5 /* BoxBreathingViewTests.swift */,
+				A0F875252CE9518D005CF3B5 /* ButeykoBreathingViewModelTests.swift */,
+				A074F0822CEA388A00DE1019 /* BreathingExerciseViewTests.swift */,
+			);
+			path = DeStressTests;
+			sourceTree = "<group>";
+		};
+		A0DD899D2CDD69ED00E0AC0D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A0DD899E2CDD6A0D00E0AC0D /* Extension+String.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A0F875142CE9417E005CF3B5 /* FourSevenEightView */ = {
+			isa = PBXGroup;
+			children = (
+				A06E2E3A2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift */,
+				A0F875152CE941C2005CF3B5 /* FourSevenEightBreathingViewModel.swift */,
+				A0533F0E2C6BABA900F5326A /* FourSevenEightDetailView.swift */,
+			);
+			path = FourSevenEightView;
+			sourceTree = "<group>";
+		};
+		A0F875172CE9484E005CF3B5 /* Boxbreathing */ = {
+			isa = PBXGroup;
+			children = (
+				A0ABF5292C6A758A0074B8E1 /* BoxBreathingView.swift */,
+				A0F875182CE94A51005CF3B5 /* DetailView.swift */,
+				A0F8751A2CE94C7C005CF3B5 /* BoxBreathingViewModel.swift */,
+				A0F8751E2CE94DC2005CF3B5 /* StatisticsView.swift */,
+				A0DB9A062D314E1C00534BA3 /* BreathingStatistic.swift */,
+			);
+			path = Boxbreathing;
+			sourceTree = "<group>";
+		};
+		A0F875202CE94FC3005CF3B5 /* ButeykoBreathingView */ = {
+			isa = PBXGroup;
+			children = (
+				A044D5912C8BA6CF00B323E0 /* ButeykoBreathingView.swift */,
+				A0F875212CE9507B005CF3B5 /* ButeykoBreathingViewModel.swift */,
+				A0F875232CE950D9005CF3B5 /* ButeykoDetailView.swift */,
+			);
+			path = ButeykoBreathingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +307,48 @@
 			dependencies = (
 			);
 			name = DeStress;
+			packageProductDependencies = (
+				A032C9FE2C35BFE40094DB07 /* Vortex */,
+			);
 			productName = DeStress;
 			productReference = A0149ED82C07C83700567BAE /* DeStress.app */;
 			productType = "com.apple.product-type.application";
+		};
+		A096BD9C2D0BAC7E004414F9 /* DeStressUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A096BDA72D0BAC7E004414F9 /* Build configuration list for PBXNativeTarget "DeStressUITests" */;
+			buildPhases = (
+				A096BD992D0BAC7E004414F9 /* Sources */,
+				A096BD9A2D0BAC7E004414F9 /* Frameworks */,
+				A096BD9B2D0BAC7E004414F9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A096BDA42D0BAC7E004414F9 /* PBXTargetDependency */,
+			);
+			name = DeStressUITests;
+			productName = DeStressUITests;
+			productReference = A096BD9D2D0BAC7E004414F9 /* DeStressUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		A0BB63A42CE3DB3A00193B1C /* DeStressTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0BB63AB2CE3DB3A00193B1C /* Build configuration list for PBXNativeTarget "DeStressTests" */;
+			buildPhases = (
+				A0BB63A12CE3DB3A00193B1C /* Sources */,
+				A0BB63A22CE3DB3A00193B1C /* Frameworks */,
+				A0BB63A32CE3DB3A00193B1C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0BB63AA2CE3DB3A00193B1C /* PBXTargetDependency */,
+			);
+			name = DeStressTests;
+			productName = DeStressTests;
+			productReference = A0BB63A52CE3DB3A00193B1C /* DeStressTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +363,14 @@
 					A0149ED72C07C83700567BAE = {
 						CreatedOnToolsVersion = 15.3;
 					};
+					A096BD9C2D0BAC7E004414F9 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A0149ED72C07C83700567BAE;
+					};
+					A0BB63A42CE3DB3A00193B1C = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A0149ED72C07C83700567BAE;
+					};
 				};
 			};
 			buildConfigurationList = A0149ED32C07C83700567BAE /* Build configuration list for PBXProject "DeStress" */;
@@ -111,11 +382,16 @@
 				Base,
 			);
 			mainGroup = A0149ECF2C07C83700567BAE;
+			packageReferences = (
+				A032C9FD2C35BFE40094DB07 /* XCRemoteSwiftPackageReference "Vortex" */,
+			);
 			productRefGroup = A0149ED92C07C83700567BAE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				A0149ED72C07C83700567BAE /* DeStress */,
+				A0BB63A42CE3DB3A00193B1C /* DeStressTests */,
+				A096BD9C2D0BAC7E004414F9 /* DeStressUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +406,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A096BD9B2D0BAC7E004414F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0BB63A32CE3DB3A00193B1C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -137,12 +427,76 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0DB9A072D314E1C00534BA3 /* BreathingStatistic.swift in Sources */,
+				A0149EEE2C07C9DE00567BAE /* SettingsView.swift in Sources */,
+				A0F8751F2CE94DC2005CF3B5 /* StatisticsView.swift in Sources */,
+				A02844102C41936200542E31 /* BreathingSettingsModel.swift in Sources */,
+				A00CFBC52C0A7E2B0088BA56 /* GlowView.swift in Sources */,
+				A0F875242CE950D9005CF3B5 /* ButeykoDetailView.swift in Sources */,
+				A044D5922C8BA6CF00B323E0 /* ButeykoBreathingView.swift in Sources */,
+				A0F875222CE9507B005CF3B5 /* ButeykoBreathingViewModel.swift in Sources */,
+				A0149EF22C07CAFD00567BAE /* Notifications.swift in Sources */,
+				A02844122C41C3D700542E31 /* RippleEffect.swift in Sources */,
+				A0149EEA2C07C87E00567BAE /* HomeView.swift in Sources */,
+				A06E2E3B2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift in Sources */,
+				A0DD899F2CDD6A0D00E0AC0D /* Extension+String.swift in Sources */,
+				A0149EEC2C07C8BC00567BAE /* BreathingExerciseView.swift in Sources */,
+				A009CAFC2C335131001CEB05 /* Gratitude&GoalsVM.swift in Sources */,
+				A0ABF52A2C6A758A0074B8E1 /* BoxBreathingView.swift in Sources */,
+				A09A3B302C5ACDBC004613C2 /* HealthKitManager.swift in Sources */,
+				A0F875162CE941C2005CF3B5 /* FourSevenEightBreathingViewModel.swift in Sources */,
+				A037D6072C46C7D40087A812 /* DeStressButton.swift in Sources */,
 				A0149EDE2C07C83700567BAE /* ContentView.swift in Sources */,
+				A0533F0F2C6BABA900F5326A /* FourSevenEightDetailView.swift in Sources */,
+				A0F875192CE94A51005CF3B5 /* DetailView.swift in Sources */,
+				A009CAFE2C3351A9001CEB05 /* Gratitude&GoalsModel.swift in Sources */,
 				A0149EDC2C07C83700567BAE /* DeStressApp.swift in Sources */,
+				A0E746B52D36A40600799CBF /* GoalItemView.swift in Sources */,
+				A009CB002C335202001CEB05 /* GratitudeGoalsView.swift in Sources */,
+				A0149EF02C07CA3800567BAE /* ProgressView.swift in Sources */,
+				A032C9FC2C35B8DC0094DB07 /* MetalShader.metal in Sources */,
+				A074F0812CEA348500DE1019 /* BreathingExerciseViewModel.swift in Sources */,
+				A0F8751B2CE94C7C005CF3B5 /* BoxBreathingViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A096BD992D0BAC7E004414F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A096BDA22D0BAC7E004414F9 /* DeStressUITestsLaunchTests.swift in Sources */,
+				A0DB9A052D3132E100534BA3 /* BoxBreathingViewUITests.swift in Sources */,
+				A096BDA92D0BADA0004414F9 /* FourSevenEightBreathing_UITests.swift in Sources */,
+				A096BDA02D0BAC7E004414F9 /* DeStressUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0BB63A12CE3DB3A00193B1C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0BB63A82CE3DB3A00193B1C /* DeStressTests.swift in Sources */,
+				A0BB63AF2CE3DB4C00193B1C /* FourSevenEightBreathingViewTests.swift in Sources */,
+				A0F8751D2CE94D3C005CF3B5 /* BoxBreathingViewTests.swift in Sources */,
+				A074F0832CEA388A00DE1019 /* BreathingExerciseViewTests.swift in Sources */,
+				A0F875262CE9518D005CF3B5 /* ButeykoBreathingViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A096BDA42D0BAC7E004414F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0149ED72C07C83700567BAE /* DeStress */;
+			targetProxy = A096BDA32D0BAC7E004414F9 /* PBXContainerItemProxy */;
+		};
+		A0BB63AA2CE3DB3A00193B1C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0149ED72C07C83700567BAE /* DeStress */;
+			targetProxy = A0BB63A92CE3DB3A00193B1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A0149EE42C07C83800567BAE /* Debug */ = {
@@ -269,12 +623,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DeStress/DeStress.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DeStress/Preview Content\"";
 				DEVELOPMENT_TEAM = 58Q543QXGB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeStress/Info.plist;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Your health records will be used to make medical records.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to HealthKit to share mindfulness sessions";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires access to HealthKit to update mindfulness sessions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,12 +657,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DeStress/DeStress.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DeStress/Preview Content\"";
 				DEVELOPMENT_TEAM = 58Q543QXGB;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DeStress/Info.plist;
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Your health records will be used to make medical records.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "This app requires access to HealthKit to share mindfulness sessions";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "This app requires access to HealthKit to update mindfulness sessions.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -319,6 +683,76 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A096BDA52D0BAC7E004414F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58Q543QXGB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tora.buke-gmail.com.DeStressUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DeStress;
+			};
+			name = Debug;
+		};
+		A096BDA62D0BAC7E004414F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58Q543QXGB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tora.buke-gmail.com.DeStressUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DeStress;
+			};
+			name = Release;
+		};
+		A0BB63AC2CE3DB3A00193B1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58Q543QXGB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tora.buke-gmail.com.DeStressTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeStress.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DeStress";
+			};
+			name = Debug;
+		};
+		A0BB63AD2CE3DB3A00193B1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 58Q543QXGB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tora.buke-gmail.com.DeStressTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeStress.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DeStress";
 			};
 			name = Release;
 		};
@@ -343,7 +777,44 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		A096BDA72D0BAC7E004414F9 /* Build configuration list for PBXNativeTarget "DeStressUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A096BDA52D0BAC7E004414F9 /* Debug */,
+				A096BDA62D0BAC7E004414F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A0BB63AB2CE3DB3A00193B1C /* Build configuration list for PBXNativeTarget "DeStressTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0BB63AC2CE3DB3A00193B1C /* Debug */,
+				A0BB63AD2CE3DB3A00193B1C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A032C9FD2C35BFE40094DB07 /* XCRemoteSwiftPackageReference "Vortex" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/Vortex";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A032C9FE2C35BFE40094DB07 /* Vortex */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A032C9FD2C35BFE40094DB07 /* XCRemoteSwiftPackageReference "Vortex" */;
+			productName = Vortex;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0149ED02C07C83700567BAE /* Project object */;
 }
