@@ -2,7 +2,7 @@
 //  FourSevenEightBreathingViewModel.swift
 //  DeStress
 //
-//  Created by Eva Madarasz on 14/11/2024.
+//  Created by Eva Madarasz
 //
 
 import Foundation

@@ -29,8 +29,8 @@ struct DeStressApp: App {
     
     var body: some Scene {
             WindowGroup {
-                BoxBreathingView()
-                    .modelContainer(for: BreathingStatistic.self)
+                BoxBreathingView(context: try! ModelContainer(for: BreathingStatistic.self).mainContext)
+                               .modelContainer(for: BreathingStatistic.self)
             }
         }
     }

@@ -3,7 +3,6 @@
 //  DeStress
 //
 //  Created by Eva  Madarasz on 13/11/2024.
-//
 
 
 import SwiftUI

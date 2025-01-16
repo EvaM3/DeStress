@@ -2,30 +2,43 @@
 //  StatisticsView.swift
 //  DeStress
 //
-//  Created by Eva Madarasz on 16/11/2024.
+//  Created by Eva Madarasz
 //
-
 
 import SwiftUI
 import Charts
 import SwiftData
 
-
 struct StatisticsView: View {
     @Query(sort: \BreathingStatistic.day) private var statistics: [BreathingStatistic]
 
     var body: some View {
-        VStack {
+        VStack(spacing: 16) {
             Text("Weekly Statistics")
                 .font(.largeTitle)
-                .padding()
+                .padding(.top)
 
             if statistics.isEmpty {
-                Text("No data available")
-                    .foregroundColor(.white)
-                    .padding()
+                VStack(spacing: 16) {
+                    Image(systemName: "chart.bar.xaxis")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 100, height: 100)
+                        .foregroundColor(.white)
+                    
+                    Text("No Data Available")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                    
+                    Text("Complete your first breathing session to see your progress here!")
+                        .font(.subheadline)
+                        .foregroundColor(.white)
+                        .multilineTextAlignment(.center)
+                        .padding(.horizontal, 40)
+                }
+                .padding()
             } else {
-                // Render the Bar Chart
+                // Rendering Bar Chart
                 Chart {
                     ForEach(statistics, id: \.day) { stat in
                         BarMark(
@@ -33,37 +46,23 @@ struct StatisticsView: View {
                             y: .value("Cycles", stat.cycles)
                         )
                         .foregroundStyle(Color("powderBlue"))
+                        .annotation(position: .top) {
+                            Text("\(stat.cycles)")
+                                .font(.caption)
+                                .foregroundColor(.white)
+                        }
                     }
                 }
-                .frame(height: 200)
+                .frame(height: 250)
                 .padding()
-                .background(Color.red.opacity(0.5)) 
+                .background(Color("appBackground").opacity(0.9))
+                .cornerRadius(10)
             }
 
             Spacer()
         }
-       // .padding()
         .navigationTitle("Statistics")
         .navigationBarTitleDisplayMode(.inline)
         .background(Color("appBackground").edgesIgnoringSafeArea(.all))
-    }
-}
-
-struct StatisticsView_Previews: PreviewProvider {
-    static var previews: some View {
-        let container = try! ModelContainer(for: BreathingStatistic.self)
-        return StatisticsView()
-            .modelContainer(container)
-            .onAppear {
-                let context = container.mainContext
-                let sampleData = [
-                    BreathingStatistic(day: "Mon", cycles: 5),
-                    BreathingStatistic(day: "Tue", cycles: 3),
-                    BreathingStatistic(day: "Wed", cycles: 7),
-                    BreathingStatistic(day: "Thu", cycles: 4),
-                    BreathingStatistic(day: "Fri", cycles: 6)
-                ]
-                sampleData.forEach { context.insert($0) }
-            }
     }
 }

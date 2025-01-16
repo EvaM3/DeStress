@@ -2,15 +2,18 @@
 //  HomeView.swift
 //  DeStress
 //
-//  Created by Eva Sira Madarasz on 29/05/2024.
+//  Created by Eva Madarasz 
 //
 
 
 import SwiftUI
+import SwiftData
 
 struct HomeView: View {
-
+    @Environment(\.modelContext) private var context
+    
     var body: some View {
+       
         
         NavigationView {
             ZStack {
@@ -53,7 +56,7 @@ struct HomeView: View {
                     
                     // MARK: Box breathing
                     
-                    NavigationLink(destination: BoxBreathingView()) {
+                    NavigationLink(destination: BoxBreathingView(context: context)) {
                         Text("Box breathing")
                             .font(.title2)
                             .foregroundColor(.white)

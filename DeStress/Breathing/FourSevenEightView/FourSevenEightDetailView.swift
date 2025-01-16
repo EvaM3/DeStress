@@ -2,8 +2,8 @@
 //  FourSevenEightDetailView.swift
 //  DeStress
 //
-//  Created by Eva Sira Madarasz on 13/08/2024.
-//
+//  Created by Eva Madarasz
+
 
 import SwiftUI
 

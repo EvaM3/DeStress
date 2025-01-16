@@ -2,7 +2,7 @@
 //  DeStressUITestsLaunchTests.swift
 //  DeStressUITests
 //
-//  Created by Eva Sira Madarasz on 10/12/2024.
+//  Created by Eva Madarasz
 //
 
 import XCTest

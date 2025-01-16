@@ -2,32 +2,17 @@
 //  BoxBreathingViewModel.swift
 //  DeStress
 //
-//  Created by Eva Sira Madarasz on 13/11/2024.
-//
+//  Created by Eva Madarasz
 
-import SwiftUI
-import AVFoundation
 import SwiftData
+import AVFoundation
+import UIKit
+
+
 
 class BoxBreathingViewModel: ObservableObject {
-    @Environment(\.modelContext) private var modelContext 
+    let modelContext: ModelContext // Injected context
 
-    func completeCycle(for day: String) {
-        let fetchRequest = FetchDescriptor<BreathingStatistic>(
-            predicate: #Predicate { $0.day == day }
-        )
-
-        if let existingStatistic = try? modelContext.fetch(fetchRequest).first {
-            existingStatistic.cycles += 1
-        } else {
-            let newStat = BreathingStatistic(day: day, cycles: 1)
-            modelContext.insert(newStat)
-        }
-
-        try? modelContext.save()
-    }
-
-    
     let phases = ["Inhale", "Hold", "Exhale", "Hold"]
     let totalPhases = 4
     private let hapticFeedback = UIImpactFeedbackGenerator(style: .medium)
@@ -41,7 +26,27 @@ class BoxBreathingViewModel: ObservableObject {
 
     var currentPhase: String {
         phases[currentPhaseIndex]
+    }
 
+    init(context: ModelContext) {
+        self.modelContext = context
+    }
+
+    // Save completed cycle to statistics ;-)
+    
+    func completeCycle(for day: String) {
+        let fetchRequest = FetchDescriptor<BreathingStatistic>(
+            predicate: #Predicate<BreathingStatistic> { $0.day == day }
+        )
+
+        if let existingStatistic = try? modelContext.fetch(fetchRequest).first {
+            existingStatistic.cycles += 1
+        } else {
+            let newStat = BreathingStatistic(day: day, cycles: 1)
+            modelContext.insert(newStat)
+        }
+
+        try? modelContext.save()
     }
 
     func toggleBreathing() {
@@ -64,6 +69,7 @@ class BoxBreathingViewModel: ObservableObject {
     func stopBreathingCycle() {
         isBreathing = false
         timer?.invalidate()
+        saveCycleToStatistics()
         resetBreathing()
     }
 
@@ -87,6 +93,7 @@ class BoxBreathingViewModel: ObservableObject {
         if currentPhaseIndex == totalPhases - 1 {
             currentPhaseIndex = 0
             cycleCount += 1
+            saveCycleToStatistics() 
         } else {
             currentPhaseIndex += 1
         }
@@ -100,6 +107,12 @@ class BoxBreathingViewModel: ObservableObject {
         currentPhaseIndex = 0
         cycleCount = 0
         secondsRemaining = 4
+    }
+
+    func saveCycleToStatistics() {
+        guard cycleCount > 0 else { return }
+        let day = getCurrentDay()
+        completeCycle(for: day)
     }
 
     func circleUIColor(for phase: String) -> UIColor {
@@ -118,5 +131,10 @@ class BoxBreathingViewModel: ObservableObject {
         utterance.voice = AVSpeechSynthesisVoice(language: "en-AU")
         synthesizer.speak(utterance)
     }
-}
 
+    private func getCurrentDay() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE"
+        return formatter.string(from: Date())
+    }
+}
