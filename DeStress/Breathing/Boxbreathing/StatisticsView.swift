@@ -9,8 +9,9 @@ import SwiftUI
 import Charts
 import SwiftData
 
+
 struct StatisticsView: View {
-    @Query(sort: \BreathingStatistic.day) private var statistics: [BreathingStatistic]
+    @Query(sort: \BreathingStatistic.day, order: .reverse) private var statistics: [BreathingStatistic]
 
     var body: some View {
         VStack(spacing: 16) {
@@ -38,7 +39,6 @@ struct StatisticsView: View {
                 }
                 .padding()
             } else {
-                // Rendering Bar Chart
                 Chart {
                     ForEach(statistics, id: \.day) { stat in
                         BarMark(
@@ -61,6 +61,9 @@ struct StatisticsView: View {
 
             Spacer()
         }
+//        .onAppear {
+//            print("StatisticsView fetched: \(statistics)")
+//        }
         .navigationTitle("Statistics")
         .navigationBarTitleDisplayMode(.inline)
         .background(Color("appBackground").edgesIgnoringSafeArea(.all))

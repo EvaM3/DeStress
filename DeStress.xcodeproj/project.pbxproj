@@ -20,9 +20,10 @@
 		A0149EEE2C07C9DE00567BAE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0149EED2C07C9DE00567BAE /* SettingsView.swift */; };
 		A0149EF02C07CA3800567BAE /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0149EEF2C07CA3800567BAE /* ProgressView.swift */; };
 		A0149EF22C07CAFD00567BAE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0149EF12C07CAFD00567BAE /* Notifications.swift */; };
+		A02448F22D3A7C8F00509BC6 /* BreathingActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02448F12D3A7C8F00509BC6 /* BreathingActionButton.swift */; };
+		A02448F42D3A7D2600509BC6 /* InfoOrStatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02448F32D3A7D2600509BC6 /* InfoOrStatButton.swift */; };
 		A02844102C41936200542E31 /* BreathingSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028440F2C41936200542E31 /* BreathingSettingsModel.swift */; };
 		A02844122C41C3D700542E31 /* RippleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02844112C41C3D700542E31 /* RippleEffect.swift */; };
-		A032C9FC2C35B8DC0094DB07 /* MetalShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = A032C9FB2C35B8DC0094DB07 /* MetalShader.metal */; };
 		A032C9FF2C35BFE40094DB07 /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = A032C9FE2C35BFE40094DB07 /* Vortex */; };
 		A037D6072C46C7D40087A812 /* DeStressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037D6062C46C7D40087A812 /* DeStressButton.swift */; };
 		A044D5922C8BA6CF00B323E0 /* ButeykoBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044D5912C8BA6CF00B323E0 /* ButeykoBreathingView.swift */; };
@@ -85,9 +86,10 @@
 		A0149EED2C07C9DE00567BAE /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		A0149EEF2C07CA3800567BAE /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		A0149EF12C07CAFD00567BAE /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		A02448F12D3A7C8F00509BC6 /* BreathingActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingActionButton.swift; sourceTree = "<group>"; };
+		A02448F32D3A7D2600509BC6 /* InfoOrStatButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOrStatButton.swift; sourceTree = "<group>"; };
 		A028440F2C41936200542E31 /* BreathingSettingsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSettingsModel.swift; sourceTree = "<group>"; };
 		A02844112C41C3D700542E31 /* RippleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleEffect.swift; sourceTree = "<group>"; };
-		A032C9FB2C35B8DC0094DB07 /* MetalShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MetalShader.metal; sourceTree = "<group>"; };
 		A037D6062C46C7D40087A812 /* DeStressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeStressButton.swift; sourceTree = "<group>"; };
 		A044D5912C8BA6CF00B323E0 /* ButeykoBreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButeykoBreathingView.swift; sourceTree = "<group>"; };
 		A0533F0E2C6BABA900F5326A /* FourSevenEightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightDetailView.swift; sourceTree = "<group>"; };
@@ -205,7 +207,6 @@
 				A0149EDF2C07C83800567BAE /* Assets.xcassets */,
 				A0DD899D2CDD69ED00E0AC0D /* Helpers */,
 				A0149EE12C07C83800567BAE /* Preview Content */,
-				A032C9FB2C35B8DC0094DB07 /* MetalShader.metal */,
 			);
 			path = DeStress;
 			sourceTree = "<group>";
@@ -279,6 +280,8 @@
 				A0F8751A2CE94C7C005CF3B5 /* BoxBreathingViewModel.swift */,
 				A0F8751E2CE94DC2005CF3B5 /* StatisticsView.swift */,
 				A0DB9A062D314E1C00534BA3 /* BreathingStatistic.swift */,
+				A02448F12D3A7C8F00509BC6 /* BreathingActionButton.swift */,
+				A02448F32D3A7D2600509BC6 /* InfoOrStatButton.swift */,
 			);
 			path = Boxbreathing;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 				A0149EEE2C07C9DE00567BAE /* SettingsView.swift in Sources */,
 				A0F8751F2CE94DC2005CF3B5 /* StatisticsView.swift in Sources */,
 				A02844102C41936200542E31 /* BreathingSettingsModel.swift in Sources */,
+				A02448F42D3A7D2600509BC6 /* InfoOrStatButton.swift in Sources */,
 				A00CFBC52C0A7E2B0088BA56 /* GlowView.swift in Sources */,
 				A0F875242CE950D9005CF3B5 /* ButeykoDetailView.swift in Sources */,
 				A044D5922C8BA6CF00B323E0 /* ButeykoBreathingView.swift in Sources */,
@@ -458,7 +462,7 @@
 				A0E746B52D36A40600799CBF /* GoalItemView.swift in Sources */,
 				A009CB002C335202001CEB05 /* GratitudeGoalsView.swift in Sources */,
 				A0149EF02C07CA3800567BAE /* ProgressView.swift in Sources */,
-				A032C9FC2C35B8DC0094DB07 /* MetalShader.metal in Sources */,
+				A02448F22D3A7C8F00509BC6 /* BreathingActionButton.swift in Sources */,
 				A074F0812CEA348500DE1019 /* BreathingExerciseViewModel.swift in Sources */,
 				A0F8751B2CE94C7C005CF3B5 /* BoxBreathingViewModel.swift in Sources */,
 			);

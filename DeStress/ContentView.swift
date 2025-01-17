@@ -4,18 +4,26 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 let captionText: String = "Welcome to ZenBreath. The app helps you to calm down, relax, and focus. Practice mindfulness. Stay calm and focused."
 
 struct ContentView: View {
+    
+    @Environment(\.modelContext) private var context: ModelContext
+    
     @State private var caption: String = ""
     @State private var showHomeView = false
     @State private var fadeInText = false
     @State private var fadeInButton = false
+    
+//    init(context: ModelContext) {
+//          _context = Environment(\.modelContext)
+//      }
 
     var body: some View {
         ZStack {
-            Spacer()
             Image("BG")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -25,12 +33,12 @@ struct ContentView: View {
                 HomeView()
                     .transition(.opacity)
                     .animation(.easeInOut(duration: 1.5), value: showHomeView)
+                    .modelContainer(for: BreathingStatistic.self) // Ensure context is passed to HomeView
             } else {
                 VStack {
                     Spacer()
 
                     VStack(spacing: 15) {
-                       
                         Text("ZenBreath")
                             .font(.custom("AmericanTypewriter", size: 32))
                             .fontWeight(.bold)
@@ -43,7 +51,6 @@ struct ContentView: View {
                                 alignment: .bottom
                             )
 
-                        // Caption text
                         Text(caption)
                             .font(.custom("AmericanTypewriter", size: 16))
                             .foregroundColor(.white)
@@ -53,12 +60,11 @@ struct ContentView: View {
                             .opacity(fadeInText ? 1 : 0)
                             .animation(.easeIn(duration: 1.5), value: fadeInText)
                     }
-                    .frame(maxWidth: 300) // Sets a maximum width to keep text within bounds
+                    .frame(maxWidth: 300)
                     .padding(.horizontal, 20)
 
                     Spacer()
 
-                    // Navigation button
                     Button(action: {
                         withAnimation {
                             showHomeView = true
@@ -86,7 +92,7 @@ struct ContentView: View {
                 }
             }
         }
-      
+        .modelContainer(for: BreathingStatistic.self) // Ensure context is available for all child views
     }
 
     func typeWriter(at position: Int = 0) {

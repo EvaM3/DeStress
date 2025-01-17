@@ -32,21 +32,26 @@ class BoxBreathingViewModel: ObservableObject {
         self.modelContext = context
     }
 
-    // Save completed cycle to statistics ;-)
-    
+
     func completeCycle(for day: String) {
         let fetchRequest = FetchDescriptor<BreathingStatistic>(
             predicate: #Predicate<BreathingStatistic> { $0.day == day }
         )
 
-        if let existingStatistic = try? modelContext.fetch(fetchRequest).first {
-            existingStatistic.cycles += 1
-        } else {
-            let newStat = BreathingStatistic(day: day, cycles: 1)
-            modelContext.insert(newStat)
+        do {
+            if let existingStatistic = try modelContext.fetch(fetchRequest).first {
+                existingStatistic.cycles += 1
+                print("Updated cycles for \(day): \(existingStatistic.cycles)")
+            } else {
+                let newStat = BreathingStatistic(day: day, cycles: 1)
+                modelContext.insert(newStat)
+                print("Inserted new statistic for \(day): \(newStat)")
+            }
+            try modelContext.save()
+            print("Data saved successfully.")
+        } catch {
+            print("Error saving data: \(error.localizedDescription)")
         }
-
-        try? modelContext.save()
     }
 
     func toggleBreathing() {
@@ -69,7 +74,7 @@ class BoxBreathingViewModel: ObservableObject {
     func stopBreathingCycle() {
         isBreathing = false
         timer?.invalidate()
-        saveCycleToStatistics()
+        saveCycle()
         resetBreathing()
     }
 
@@ -93,7 +98,7 @@ class BoxBreathingViewModel: ObservableObject {
         if currentPhaseIndex == totalPhases - 1 {
             currentPhaseIndex = 0
             cycleCount += 1
-            saveCycleToStatistics() 
+            saveCycle()
         } else {
             currentPhaseIndex += 1
         }
@@ -109,10 +114,10 @@ class BoxBreathingViewModel: ObservableObject {
         secondsRemaining = 4
     }
 
-    func saveCycleToStatistics() {
-        guard cycleCount > 0 else { return }
-        let day = getCurrentDay()
-        completeCycle(for: day)
+    func saveCycle() {
+       guard cycleCount > 0 else { return }
+        let today = getCurrentDay()
+        completeCycle(for: today)
     }
 
     func circleUIColor(for phase: String) -> UIColor {
