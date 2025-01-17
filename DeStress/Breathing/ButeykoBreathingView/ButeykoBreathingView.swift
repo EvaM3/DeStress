@@ -4,22 +4,21 @@ struct ButeykoBreathingView: View {
     @StateObject private var viewModel = ButeykoBreathingViewModel()
 
     var body: some View {
-        
         TabView {
             mainView
-            Spacer()
-            
                 .tabItem {
                     Label("Breathing", systemImage: "lungs.fill")
                 }
-            Spacer()
+            
+            ButeykoStatisticsView()
+                .tabItem {
+                    Label("CP History", systemImage: "chart.bar")
+                }
+            
             ButeykoDetailView()
-          
                 .tabItem {
                     Label("Learn More", systemImage: "info.circle")
-                        .padding(.trailing, 30)
                 }
-            Spacer()
         }
         .accentColor(.white)
     }
@@ -87,33 +86,8 @@ struct ButeykoBreathingView: View {
                 .padding()
 
                 Spacer()
-
-                if !viewModel.controlPauseHistory.isEmpty {
-                    Text("Your CP History:")
-                        .font(.title2.weight(.semibold))
-                        .padding()
-                        .foregroundColor(.primary)
-
-                    ScrollView {
-                        VStack(alignment: .leading) {
-                            ForEach(viewModel.controlPauseHistory, id: \.self) { cp in
-                                Text("\(cp) seconds")
-                                    .font(.body)
-                                    .padding(.vertical, 4)
-                                    .padding(.horizontal)
-                                    .background(Color(.secondarySystemBackground))
-                                    .cornerRadius(8)
-                                    .padding(.horizontal)
-                            }
-                        }
-                    }
-                    .frame(maxHeight: 200)
-                }
-
-                Spacer()
             }
             .padding()
         }
     }
 }
-

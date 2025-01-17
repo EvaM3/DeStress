@@ -2,19 +2,26 @@
 //  BoxBreathingViewTests.swift
 //  DeStressTests
 //
-//  Created by Eva  Madarasz on 13/11/2024.
-//
+//  Created by Eva Madarasz on 13/11/2024.
+
 
 import XCTest
 import SwiftUI
+import SwiftData
 @testable import DeStress
 
 
 class BoxBreathingViewModelTests: XCTestCase {
     var viewModel: BoxBreathingViewModel!
+    var testContext: ModelContext!
 
-    override func setUpWithError() throws {
-        viewModel = BoxBreathingViewModel()
+    @MainActor override func setUpWithError() throws {
+        // Create an in-memory ModelContainer for testing
+               let container = try ModelContainer(for: BreathingStatistic.self)
+               testContext = container.mainContext
+
+               // Initialize the view model with the test context
+               viewModel = BoxBreathingViewModel(context: testContext)
     }
 
     override func tearDownWithError() throws {

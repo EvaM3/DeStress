@@ -30,6 +30,7 @@
 		A06E2E3B2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06E2E3A2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift */; };
 		A074F0812CEA348500DE1019 /* BreathingExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074F0802CEA348500DE1019 /* BreathingExerciseViewModel.swift */; };
 		A074F0832CEA388A00DE1019 /* BreathingExerciseViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074F0822CEA388A00DE1019 /* BreathingExerciseViewTests.swift */; };
+		A075806D2D39D77400358988 /* ButeykoStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075806C2D39D77400358988 /* ButeykoStatisticsView.swift */; };
 		A096BDA02D0BAC7E004414F9 /* DeStressUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096BD9F2D0BAC7E004414F9 /* DeStressUITests.swift */; };
 		A096BDA22D0BAC7E004414F9 /* DeStressUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096BDA12D0BAC7E004414F9 /* DeStressUITestsLaunchTests.swift */; };
 		A096BDA92D0BADA0004414F9 /* FourSevenEightBreathing_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A096BDA82D0BADA0004414F9 /* FourSevenEightBreathing_UITests.swift */; };
@@ -93,6 +94,7 @@
 		A06E2E3A2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightBreathingView.swift; sourceTree = "<group>"; };
 		A074F0802CEA348500DE1019 /* BreathingExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseViewModel.swift; sourceTree = "<group>"; };
 		A074F0822CEA388A00DE1019 /* BreathingExerciseViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseViewTests.swift; sourceTree = "<group>"; };
+		A075806C2D39D77400358988 /* ButeykoStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButeykoStatisticsView.swift; sourceTree = "<group>"; };
 		A096BD9D2D0BAC7E004414F9 /* DeStressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeStressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A096BD9F2D0BAC7E004414F9 /* DeStressUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeStressUITests.swift; sourceTree = "<group>"; };
 		A096BDA12D0BAC7E004414F9 /* DeStressUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeStressUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				A044D5912C8BA6CF00B323E0 /* ButeykoBreathingView.swift */,
 				A0F875212CE9507B005CF3B5 /* ButeykoBreathingViewModel.swift */,
 				A0F875232CE950D9005CF3B5 /* ButeykoDetailView.swift */,
+				A075806C2D39D77400358988 /* ButeykoStatisticsView.swift */,
 			);
 			path = ButeykoBreathingView;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 				A044D5922C8BA6CF00B323E0 /* ButeykoBreathingView.swift in Sources */,
 				A0F875222CE9507B005CF3B5 /* ButeykoBreathingViewModel.swift in Sources */,
 				A0149EF22C07CAFD00567BAE /* Notifications.swift in Sources */,
+				A075806D2D39D77400358988 /* ButeykoStatisticsView.swift in Sources */,
 				A02844122C41C3D700542E31 /* RippleEffect.swift in Sources */,
 				A0149EEA2C07C87E00567BAE /* HomeView.swift in Sources */,
 				A06E2E3B2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift in Sources */,
