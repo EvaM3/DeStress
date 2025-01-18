@@ -22,7 +22,7 @@ struct GratitudeGoalsView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Gratitude")
                             .font(.headline)
-                            .foregroundColor(.purple)
+                            .foregroundColor(.white)
                         
                         LazyVStack(spacing: 8) {
                             ForEach(Array(viewModel.gratitudeItems.enumerated()), id: \.1.id) { index, item in
@@ -70,7 +70,7 @@ struct GratitudeGoalsView: View {
                                 Button(action: addNewGratitude) {
                                     Image(systemName: "plus.circle.fill")
                                         .font(.title)
-                                        .foregroundColor(.purple)
+                                        .foregroundColor(.white)
                                 }
                                 .disabled(newGratitudeTitle.isEmpty || viewModel.gratitudeItems.count >= 3)
                             }
@@ -82,7 +82,7 @@ struct GratitudeGoalsView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Goals")
                             .font(.headline)
-                            .foregroundColor(.purple)
+                            .foregroundColor(.white)
                         
                         LazyVStack(spacing: 8) {
                             ForEach(Array(viewModel.goalItems.enumerated()), id: \.1.id) { index, item in
@@ -127,7 +127,7 @@ struct GratitudeGoalsView: View {
                                 Button(action: addNewGoal) {
                                     Image(systemName: "plus.circle.fill")
                                         .font(.title)
-                                        .foregroundColor(.purple)
+                                        .foregroundColor(.white)
                                 }
                                 .disabled(newGoalTitle.isEmpty || viewModel.goalItems.count >= 3)
                             }

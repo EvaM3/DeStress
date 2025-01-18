@@ -16,6 +16,12 @@ class FourSevenEightBreathingViewModel: ObservableObject {
     @Published var breathSize: CGFloat = 1.0
     @Published var cycleCount: Int = 0
     @Published var countdown: Int = 4
+    
+       // Statistics properties
+     @Published var totalCycles: Int = 0
+     @Published var totalDuration: Double = 0.0 // in seconds
+     @Published var averageCycleDuration: Double = 0.0 // in seconds
+
 
      let inhaleDuration: Double = 4.0
      let holdDuration: Double = 7.0
@@ -26,6 +32,9 @@ class FourSevenEightBreathingViewModel: ObservableObject {
     func startBreathingCycle() {
         isBreathing = true
         cycleCount = 0
+        totalCycles = 0
+        totalDuration = 0.0
+        averageCycleDuration = 0.0
         countdown = Int(inhaleDuration)
         breathPhase = "Inhale"
         nextBreathingPhase()
@@ -39,6 +48,7 @@ class FourSevenEightBreathingViewModel: ObservableObject {
         countdown = Int(inhaleDuration)
         timer?.invalidate()
         timer = nil
+        updateStatistics()
     }
 
     private func nextBreathingPhase() {
@@ -48,6 +58,9 @@ class FourSevenEightBreathingViewModel: ObservableObject {
             self.updateBreathPhase("Hold", duration: self.holdDuration) {
                 self.updateBreathPhase("Exhale", duration: self.exhaleDuration) {
                     self.cycleCount += 1
+                    self.totalCycles += 1
+                    self.totalDuration += self.inhaleDuration + self.holdDuration + self.exhaleDuration
+                    self.updateStatistics()
                     self.nextBreathingPhase()
                 }
             }
@@ -94,5 +107,11 @@ class FourSevenEightBreathingViewModel: ObservableObject {
             }
         }
     }
+    
+    private func updateStatistics() {
+              if totalCycles > 0 {
+               averageCycleDuration = totalDuration / Double(totalCycles)
+           }
+       }
 }
 

@@ -2,45 +2,65 @@
 //  FourSevenEightBreathingView.swift
 //  DeStress
 //
-//  Created by Eva Madarasz 
+//  Created by Eva Madarasz
 //
 
 import SwiftUI
 
 struct FourSevenEightBreathingView: View {
     @StateObject private var viewModel = FourSevenEightBreathingViewModel()
-  
-
+    @State private var showStatistics = false // Toggle for statistics view
+    
+    
     var body: some View {
         ZStack {
             VStack {
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        showStatistics.toggle()
+                    }) {
+                        HStack {
+                            Image(systemName: "chart.bar")
+                                .font(.headline)
+                            Text("Stats")
+                                .font(.headline)
+                        }
+                        .padding(10)
+                        .background(Color("powderBlue"))
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                    }
+                    .padding(.trailing)
+                }
+                .padding(.top)
                 Spacer()
-
+                
                 Text("Cycle: \(viewModel.cycleCount)")
                     .font(.headline)
                     .foregroundColor(.white)
-
+                
                 Text(viewModel.breathPhase)
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                     .padding(.bottom, 10)
-
+                
                 Text("\(viewModel.countdown)")
                     .font(.largeTitle)
                     .fontWeight(.semibold)
                     .foregroundColor(.white)
                     .padding(.bottom, 50)
-
+                
                 Circle()
                     .fill(Color(uiColor: circleUIColor(for: viewModel.breathPhase)).opacity(viewModel.breathOpacity))
                     .frame(width: 200 * viewModel.breathSize, height: 200 * viewModel.breathSize)
                     .accessibilityIdentifier("BreathingCircle")
                     .accessibilityLabel("BreathingCircle")
                     .accessibilityElement()
-
+                
                 Spacer()
-
+                
                 Button(action: {
                     if viewModel.isBreathing {
                         viewModel.stopBreathingCycle()
@@ -54,7 +74,7 @@ struct FourSevenEightBreathingView: View {
                         .background(Color("powderBlue"))
                         .foregroundColor(.white)
                         .cornerRadius(10)
-                        
+                    
                 }
                 .accessibilityIdentifier("StartStopButton")
             }
@@ -65,7 +85,7 @@ struct FourSevenEightBreathingView: View {
             )
         }
     }
-
+    
     func circleUIColor(for phase: String) -> UIColor {
         switch phase {
         case "Inhale":
