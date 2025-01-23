@@ -23,6 +23,8 @@ class BoxBreathingViewModel: ObservableObject {
     @Published var isBreathing = false
     @Published var secondsRemaining = 4
     @Published var timer: Timer?
+    @Published var statistics: [BreathingStatistic] = []
+
 
     var currentPhase: String {
         phases[currentPhaseIndex]
@@ -33,26 +35,16 @@ class BoxBreathingViewModel: ObservableObject {
     }
 
 
-    func completeCycle(for day: String) {
-        let fetchRequest = FetchDescriptor<BreathingStatistic>(
-            predicate: #Predicate<BreathingStatistic> { $0.day == day }
-        )
-
+    func fetchStatistics() -> [BreathingStatistic] {
+        let fetchRequest = FetchDescriptor<BreathingStatistic>()
         do {
-            if let existingStatistic = try modelContext.fetch(fetchRequest).first {
-                existingStatistic.cycles += 1
-                print("Updated cycles for \(day): \(existingStatistic.cycles)")
-            } else {
-                let newStat = BreathingStatistic(day: day, cycles: 1)
-                modelContext.insert(newStat)
-                print("Inserted new statistic for \(day): \(newStat)")
-            }
-            try modelContext.save()
-            print("Data saved successfully.")
+            return try modelContext.fetch(fetchRequest)
         } catch {
-            print("Error saving data: \(error.localizedDescription)")
+            print("Error fetching statistics: \(error.localizedDescription)")
+            return []
         }
     }
+
 
     func toggleBreathing() {
         if isBreathing {
@@ -76,6 +68,7 @@ class BoxBreathingViewModel: ObservableObject {
         timer?.invalidate()
         saveCycle()
         resetBreathing()
+    
     }
 
     func runTimer() {
@@ -117,7 +110,7 @@ class BoxBreathingViewModel: ObservableObject {
     func saveCycle() {
        guard cycleCount > 0 else { return }
         let today = getCurrentDay()
-        completeCycle(for: today)
+         statistics = fetchStatistics()
     }
 
     func circleUIColor(for phase: String) -> UIColor {
