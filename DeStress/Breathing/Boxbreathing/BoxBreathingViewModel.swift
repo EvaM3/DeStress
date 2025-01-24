@@ -12,6 +12,9 @@ import UIKit
 
 class BoxBreathingViewModel: ObservableObject {
     let modelContext: ModelContext // Injected context
+    init(context: ModelContext) {
+        self.modelContext = context
+    }
 
     let phases = ["Inhale", "Hold", "Exhale", "Hold"]
     let totalPhases = 4
@@ -30,10 +33,6 @@ class BoxBreathingViewModel: ObservableObject {
         phases[currentPhaseIndex]
     }
 
-    init(context: ModelContext) {
-        self.modelContext = context
-    }
-
 
     func fetchStatistics() -> [BreathingStatistic] {
         let fetchRequest = FetchDescriptor<BreathingStatistic>()
@@ -44,7 +43,25 @@ class BoxBreathingViewModel: ObservableObject {
             return []
         }
     }
+    
+    func completeCycle(for day: String) {
+           let fetchRequest = FetchDescriptor<BreathingStatistic>(
+               predicate: #Predicate<BreathingStatistic> { $0.day == day }
+           )
 
+           do {
+               if let existingStatistic = try modelContext.fetch(fetchRequest).first {
+                   existingStatistic.cycles += 1
+               } else {
+                   let newStat = BreathingStatistic(day: day, cycles: 1)
+                   modelContext.insert(newStat)
+               }
+               try modelContext.save()
+           } catch {
+               print("Error saving data: \(error.localizedDescription)")
+           }
+       }
+   
 
     func toggleBreathing() {
         if isBreathing {
@@ -110,7 +127,8 @@ class BoxBreathingViewModel: ObservableObject {
     func saveCycle() {
        guard cycleCount > 0 else { return }
         let today = getCurrentDay()
-         statistics = fetchStatistics()
+         completeCycle(for: today)
+        // statistics = fetchStatistics()
     }
 
     func circleUIColor(for phase: String) -> UIColor {

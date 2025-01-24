@@ -12,15 +12,17 @@ let captionText: String = "Welcome to ZenBreath. The app helps you to calm down,
 struct ContentView: View {
     
     @Environment(\.modelContext) private var context: ModelContext
+    @StateObject private var viewModel: BoxBreathingViewModel
+
+     init() {
+         _viewModel = StateObject(wrappedValue: BoxBreathingViewModel(context: Environment(\.modelContext).wrappedValue))
+     }
     
     @State private var caption: String = ""
     @State private var showHomeView = false
     @State private var fadeInText = false
     @State private var fadeInButton = false
     
-//    init(context: ModelContext) {
-//          _context = Environment(\.modelContext)
-//      }
 
     var body: some View {
         ZStack {

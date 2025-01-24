@@ -12,13 +12,13 @@ import SwiftData
 
 struct StatisticsView: View {
     @Query(sort: \BreathingStatistic.day, order: .reverse) private var statistics: [BreathingStatistic]
-
+    
     var body: some View {
         VStack(spacing: 16) {
             Text("Weekly Statistics")
                 .font(.largeTitle)
                 .padding(.top)
-
+            
             if statistics.isEmpty {
                 VStack(spacing: 16) {
                     Image(systemName: "chart.bar.xaxis")
@@ -58,14 +58,18 @@ struct StatisticsView: View {
                 .background(Color("appBackground").opacity(0.9))
                 .cornerRadius(10)
             }
-
+            
             Spacer()
         }
-//        .onAppear {
-//            print("StatisticsView fetched: \(statistics)")
-//        }
+        //        .onAppear {
+        //            print("StatisticsView fetched: \(statistics)")
+        //        }
         .navigationTitle("Statistics")
         .navigationBarTitleDisplayMode(.inline)
         .background(Color("appBackground").edgesIgnoringSafeArea(.all))
     }
+    
 }
+
+
+

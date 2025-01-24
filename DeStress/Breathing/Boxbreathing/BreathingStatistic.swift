@@ -5,7 +5,7 @@
 //  Created by Eva Madarasz
 //
 
-import Foundation
+import SwiftUI
 import SwiftData
 
 @Model

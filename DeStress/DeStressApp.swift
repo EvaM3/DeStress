@@ -17,11 +17,11 @@ struct DeStressApp: App {
             WindowGroup {
                 NavigationStack {
                     ContentView()
-                      .modelContainer(for: [BreathingStatistic.self]) 
+                               
+                   .modelContainer(for: BreathingStatistic.self)
+                    
                 }
             }
         }
     }
 
-//                BoxBreathingView(context: try! ModelContainer(for: BreathingStatistic.self).mainContext)
-//                               .modelContainer(for: BreathingStatistic.self)
