@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftData
 
 struct HomeView: View {
-    @Environment(\.modelContext) private var context
+  @Environment(\.modelContext) private var context
 
     var body: some View {
         NavigationStack {

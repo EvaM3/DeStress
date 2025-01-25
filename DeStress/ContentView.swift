@@ -13,6 +13,7 @@ struct ContentView: View {
     
     @Environment(\.modelContext) private var context: ModelContext
     @StateObject private var viewModel: BoxBreathingViewModel
+    @Query(sort: \BreathingStatistic.day, order: .reverse) private var statistics: [BreathingStatistic]
 
      init() {
          _viewModel = StateObject(wrappedValue: BoxBreathingViewModel(context: Environment(\.modelContext).wrappedValue))
@@ -94,7 +95,7 @@ struct ContentView: View {
                 }
             }
         }
-        .modelContainer(for: BreathingStatistic.self) // Ensure context is available for all child views
+    
     }
 
     func typeWriter(at position: Int = 0) {

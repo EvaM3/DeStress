@@ -12,6 +12,7 @@ import SwiftData
 
 struct StatisticsView: View {
     @Query(sort: \BreathingStatistic.day, order: .reverse) private var statistics: [BreathingStatistic]
+    @Environment(\.modelContext) private var context
     
     var body: some View {
         VStack(spacing: 16) {
@@ -61,9 +62,9 @@ struct StatisticsView: View {
             
             Spacer()
         }
-        //        .onAppear {
-        //            print("StatisticsView fetched: \(statistics)")
-        //        }
+                .onAppear {
+                    print("StatisticsView fetched: \(statistics)")
+                }
         .navigationTitle("Statistics")
         .navigationBarTitleDisplayMode(.inline)
         .background(Color("appBackground").edgesIgnoringSafeArea(.all))

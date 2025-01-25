@@ -84,7 +84,9 @@ struct BoxBreathingView: View {
 
                     Spacer()
 
-                    Button(action: viewModel.toggleBreathing) {
+                    Button(action: {
+                        viewModel.toggleBreathing()
+                    }) {
                         Text(viewModel.isBreathing ? "Stop Exercise" : "Start Exercise")
                             .foregroundColor(.white)
                             .padding()
