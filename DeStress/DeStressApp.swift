@@ -17,10 +17,8 @@ struct DeStressApp: App {
             WindowGroup {
                 NavigationStack {
                     ContentView()
-                               
-                   .modelContainer(for: BreathingStatistic.self)
-                    
                 }
+                   .modelContainer(for: [BreathingStatistic.self])
             }
         }
     }

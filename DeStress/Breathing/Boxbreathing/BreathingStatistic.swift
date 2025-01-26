@@ -10,7 +10,7 @@ import SwiftData
 
 @Model
 class BreathingStatistic {
-    @Attribute var day: String
+    @Attribute(.unique) var day: String
     @Attribute var cycles: Int
 
     init(day: String, cycles: Int) {

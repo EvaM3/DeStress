@@ -13,13 +13,19 @@ import SwiftData
 
 
 struct BoxBreathingView: View {
+    
     @Environment(\.modelContext) private var modelContext
-        @StateObject private var viewModel: BoxBreathingViewModel
+          @StateObject private var viewModel: BoxBreathingViewModel
 
-        init(context: ModelContext) {
-            _viewModel = StateObject(wrappedValue: BoxBreathingViewModel(context: context))
-        }
-    @State private var isShowingDetail: Bool = false
+          init(context: ModelContext) {
+              _viewModel = StateObject(wrappedValue: BoxBreathingViewModel(context: context))
+          }
+    
+       @State private var isShowingDetail: Bool = false
+    
+
+    @Query(sort: \BreathingStatistic.day, order: .reverse) private var statistics: [BreathingStatistic]
+
 
     var body: some View {
         NavigationStack {
@@ -30,6 +36,7 @@ struct BoxBreathingView: View {
 
                         VStack {
                             // Info Button
+                        
                             Button(action: {
                                 withAnimation {
                                     isShowingDetail.toggle()
@@ -93,6 +100,7 @@ struct BoxBreathingView: View {
                             .background(Color("powderBlue"))
                             .cornerRadius(10)
                     }
+                   
                 }
                 .padding()
                 .background(Color("appBackground").edgesIgnoringSafeArea(.all))

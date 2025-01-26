@@ -11,9 +11,14 @@ import UIKit
 
 
 class BoxBreathingViewModel: ObservableObject {
-    let modelContext: ModelContext // Injected context
+    private var modelContext: ModelContext
+    
     init(context: ModelContext) {
         self.modelContext = context
+    }
+    
+    func setModelContext(_ context: ModelContext) {
+           self.modelContext = context
     }
     
     let phases = ["Inhale", "Hold", "Exhale", "Hold"]
@@ -50,9 +55,9 @@ class BoxBreathingViewModel: ObservableObject {
         )
         
         do {
-            // Fetch statistics for the given day
+            
             if let existingStatistic = try modelContext.fetch(fetchRequest).first {
-                // Update cycles count
+                
                 existingStatistic.cycles += 1
                 print("Updated cycles for \(day): \(existingStatistic.cycles)")
             } else {
