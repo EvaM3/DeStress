@@ -6,7 +6,6 @@
 
 import SwiftUI
 
-import SwiftUI
 
 struct BreathingExerciseView: View {
     @ObservedObject var viewModel: BreathingExerciseViewModel

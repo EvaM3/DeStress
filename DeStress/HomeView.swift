@@ -23,7 +23,7 @@ struct HomeView: View {
                     Spacer()
 
                     // MARK: One minute breathing
-                    NavigationLink(destination: BreathingExerciseView(viewModel: BreathingExerciseViewModel())) {
+                    NavigationLink(destination: BreathingExerciseView(viewModel: BreathingExerciseViewModel(context: context))) {
                         HomeButton(title: "Calm down with breathing")
                     }
                     .padding(.bottom, 40)

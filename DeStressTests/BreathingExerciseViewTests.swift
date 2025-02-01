@@ -14,7 +14,6 @@ final class BreathingExerciseViewTests: XCTestCase {
 
       override func setUp() {
           super.setUp()
-          viewModel = BreathingExerciseViewModel()
       }
 
       func testCountdownStarts() {

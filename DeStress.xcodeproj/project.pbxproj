@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A00513BD2D4ED34C00D5E916 /* BreathingExerciseStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00513BC2D4ED34C00D5E916 /* BreathingExerciseStatisticsView.swift */; };
+		A00513BF2D4ED4C400D5E916 /* BreathingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00513BE2D4ED4C400D5E916 /* BreathingSession.swift */; };
 		A009CAFC2C335131001CEB05 /* Gratitude&GoalsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009CAFB2C335131001CEB05 /* Gratitude&GoalsVM.swift */; };
 		A009CAFE2C3351A9001CEB05 /* Gratitude&GoalsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009CAFD2C3351A9001CEB05 /* Gratitude&GoalsModel.swift */; };
 		A009CB002C335202001CEB05 /* GratitudeGoalsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A009CAFF2C335202001CEB05 /* GratitudeGoalsView.swift */; };
@@ -71,6 +73,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A00513BC2D4ED34C00D5E916 /* BreathingExerciseStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseStatisticsView.swift; sourceTree = "<group>"; };
+		A00513BE2D4ED4C400D5E916 /* BreathingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingSession.swift; sourceTree = "<group>"; };
 		A009CAFB2C335131001CEB05 /* Gratitude&GoalsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gratitude&GoalsVM.swift"; sourceTree = "<group>"; };
 		A009CAFD2C3351A9001CEB05 /* Gratitude&GoalsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gratitude&GoalsModel.swift"; sourceTree = "<group>"; };
 		A009CAFF2C335202001CEB05 /* GratitudeGoalsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeGoalsView.swift; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 				A02844112C41C3D700542E31 /* RippleEffect.swift */,
 				A0149EEB2C07C8BC00567BAE /* BreathingExerciseView.swift */,
 				A074F0802CEA348500DE1019 /* BreathingExerciseViewModel.swift */,
+				A00513BC2D4ED34C00D5E916 /* BreathingExerciseStatisticsView.swift */,
+				A00513BE2D4ED4C400D5E916 /* BreathingSession.swift */,
 			);
 			path = CoreBreathing;
 			sourceTree = "<group>";
@@ -454,6 +460,7 @@
 				A09A3B302C5ACDBC004613C2 /* HealthKitManager.swift in Sources */,
 				A0F875162CE941C2005CF3B5 /* FourSevenEightBreathingViewModel.swift in Sources */,
 				A037D6072C46C7D40087A812 /* DeStressButton.swift in Sources */,
+				A00513BF2D4ED4C400D5E916 /* BreathingSession.swift in Sources */,
 				A0149EDE2C07C83700567BAE /* ContentView.swift in Sources */,
 				A0533F0F2C6BABA900F5326A /* FourSevenEightDetailView.swift in Sources */,
 				A0F875192CE94A51005CF3B5 /* DetailView.swift in Sources */,
@@ -464,6 +471,7 @@
 				A0149EF02C07CA3800567BAE /* ProgressView.swift in Sources */,
 				A02448F22D3A7C8F00509BC6 /* BreathingActionButton.swift in Sources */,
 				A074F0812CEA348500DE1019 /* BreathingExerciseViewModel.swift in Sources */,
+				A00513BD2D4ED34C00D5E916 /* BreathingExerciseStatisticsView.swift in Sources */,
 				A0F8751B2CE94C7C005CF3B5 /* BoxBreathingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
