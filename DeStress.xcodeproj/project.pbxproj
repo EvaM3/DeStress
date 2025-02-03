@@ -29,6 +29,7 @@
 		A032C9FF2C35BFE40094DB07 /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = A032C9FE2C35BFE40094DB07 /* Vortex */; };
 		A037D6072C46C7D40087A812 /* DeStressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037D6062C46C7D40087A812 /* DeStressButton.swift */; };
 		A044D5922C8BA6CF00B323E0 /* ButeykoBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044D5912C8BA6CF00B323E0 /* ButeykoBreathingView.swift */; };
+		A0463BB92D510E6400F333A9 /* FourSevenEightBreathingStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0463BB82D510E6400F333A9 /* FourSevenEightBreathingStatisticsView.swift */; };
 		A0533F0F2C6BABA900F5326A /* FourSevenEightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0533F0E2C6BABA900F5326A /* FourSevenEightDetailView.swift */; };
 		A06E2E3B2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06E2E3A2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift */; };
 		A074F0812CEA348500DE1019 /* BreathingExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074F0802CEA348500DE1019 /* BreathingExerciseViewModel.swift */; };
@@ -96,6 +97,7 @@
 		A02844112C41C3D700542E31 /* RippleEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleEffect.swift; sourceTree = "<group>"; };
 		A037D6062C46C7D40087A812 /* DeStressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeStressButton.swift; sourceTree = "<group>"; };
 		A044D5912C8BA6CF00B323E0 /* ButeykoBreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButeykoBreathingView.swift; sourceTree = "<group>"; };
+		A0463BB82D510E6400F333A9 /* FourSevenEightBreathingStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightBreathingStatisticsView.swift; sourceTree = "<group>"; };
 		A0533F0E2C6BABA900F5326A /* FourSevenEightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightDetailView.swift; sourceTree = "<group>"; };
 		A06E2E3A2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightBreathingView.swift; sourceTree = "<group>"; };
 		A074F0802CEA348500DE1019 /* BreathingExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseViewModel.swift; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 				A06E2E3A2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift */,
 				A0F875152CE941C2005CF3B5 /* FourSevenEightBreathingViewModel.swift */,
 				A0533F0E2C6BABA900F5326A /* FourSevenEightDetailView.swift */,
+				A0463BB82D510E6400F333A9 /* FourSevenEightBreathingStatisticsView.swift */,
 			);
 			path = FourSevenEightView;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				A00513BF2D4ED4C400D5E916 /* BreathingSession.swift in Sources */,
 				A0149EDE2C07C83700567BAE /* ContentView.swift in Sources */,
 				A0533F0F2C6BABA900F5326A /* FourSevenEightDetailView.swift in Sources */,
+				A0463BB92D510E6400F333A9 /* FourSevenEightBreathingStatisticsView.swift in Sources */,
 				A0F875192CE94A51005CF3B5 /* DetailView.swift in Sources */,
 				A009CAFE2C3351A9001CEB05 /* Gratitude&GoalsModel.swift in Sources */,
 				A0149EDC2C07C83700567BAE /* DeStressApp.swift in Sources */,

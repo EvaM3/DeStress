@@ -13,7 +13,7 @@ struct ButeykoStatisticsView: View {
 
     var body: some View {
         ZStack {
-            Color("appBackground") // Full background color
+            Color("appBackground") 
                 .ignoresSafeArea()
 
             VStack {

@@ -31,6 +31,9 @@ struct FourSevenEightBreathingView: View {
                         .foregroundColor(.white)
                         .cornerRadius(8)
                     }
+                    .sheet(isPresented: $showStatistics) {
+                        FourSevenEightBreathingStatisticsView(viewModel: viewModel)
+                    }
                     .padding(.trailing)
                 }
                 .padding(.top)
