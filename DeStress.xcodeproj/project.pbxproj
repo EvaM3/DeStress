@@ -32,6 +32,8 @@
 		A0463BB92D510E6400F333A9 /* FourSevenEightBreathingStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0463BB82D510E6400F333A9 /* FourSevenEightBreathingStatisticsView.swift */; };
 		A0533F0F2C6BABA900F5326A /* FourSevenEightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0533F0E2C6BABA900F5326A /* FourSevenEightDetailView.swift */; };
 		A06E2E3B2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06E2E3A2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift */; };
+		A0735BEC2D94B70700D9AEC0 /* backgroundColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0735BEB2D94B70700D9AEC0 /* backgroundColorView.swift */; };
+		A0735BEE2D94B85300D9AEC0 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0735BED2D94B85300D9AEC0 /* BlurView.swift */; };
 		A074F0812CEA348500DE1019 /* BreathingExerciseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074F0802CEA348500DE1019 /* BreathingExerciseViewModel.swift */; };
 		A074F0832CEA388A00DE1019 /* BreathingExerciseViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A074F0822CEA388A00DE1019 /* BreathingExerciseViewTests.swift */; };
 		A075806D2D39D77400358988 /* ButeykoStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A075806C2D39D77400358988 /* ButeykoStatisticsView.swift */; };
@@ -100,6 +102,8 @@
 		A0463BB82D510E6400F333A9 /* FourSevenEightBreathingStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightBreathingStatisticsView.swift; sourceTree = "<group>"; };
 		A0533F0E2C6BABA900F5326A /* FourSevenEightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightDetailView.swift; sourceTree = "<group>"; };
 		A06E2E3A2C66BC3E00DFB037 /* FourSevenEightBreathingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightBreathingView.swift; sourceTree = "<group>"; };
+		A0735BEB2D94B70700D9AEC0 /* backgroundColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backgroundColorView.swift; sourceTree = "<group>"; };
+		A0735BED2D94B85300D9AEC0 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		A074F0802CEA348500DE1019 /* BreathingExerciseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseViewModel.swift; sourceTree = "<group>"; };
 		A074F0822CEA388A00DE1019 /* BreathingExerciseViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingExerciseViewTests.swift; sourceTree = "<group>"; };
 		A075806C2D39D77400358988 /* ButeykoStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButeykoStatisticsView.swift; sourceTree = "<group>"; };
@@ -266,6 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				A0DD899E2CDD6A0D00E0AC0D /* Extension+String.swift */,
+				A0735BEB2D94B70700D9AEC0 /* backgroundColorView.swift */,
+				A0735BED2D94B85300D9AEC0 /* BlurView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -446,6 +452,7 @@
 				A0149EEE2C07C9DE00567BAE /* SettingsView.swift in Sources */,
 				A0F8751F2CE94DC2005CF3B5 /* StatisticsView.swift in Sources */,
 				A02844102C41936200542E31 /* BreathingSettingsModel.swift in Sources */,
+				A0735BEE2D94B85300D9AEC0 /* BlurView.swift in Sources */,
 				A02448F42D3A7D2600509BC6 /* InfoOrStatButton.swift in Sources */,
 				A00CFBC52C0A7E2B0088BA56 /* GlowView.swift in Sources */,
 				A0F875242CE950D9005CF3B5 /* ButeykoDetailView.swift in Sources */,
@@ -472,6 +479,7 @@
 				A0149EDC2C07C83700567BAE /* DeStressApp.swift in Sources */,
 				A0E746B52D36A40600799CBF /* GoalItemView.swift in Sources */,
 				A009CB002C335202001CEB05 /* GratitudeGoalsView.swift in Sources */,
+				A0735BEC2D94B70700D9AEC0 /* backgroundColorView.swift in Sources */,
 				A0149EF02C07CA3800567BAE /* ProgressView.swift in Sources */,
 				A02448F22D3A7C8F00509BC6 /* BreathingActionButton.swift in Sources */,
 				A074F0812CEA348500DE1019 /* BreathingExerciseViewModel.swift in Sources */,

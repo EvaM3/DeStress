@@ -28,6 +28,7 @@ struct ButeykoBreathingView: View {
             Color("appBackground")
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
+          
 
             VStack {
                 Spacer()
@@ -60,7 +61,7 @@ struct ButeykoBreathingView: View {
                         Text("Stop Exercise")
                             .font(.headline)
                             .padding()
-                            .frame(width: 150)
+                            .frame(width: 150, height: 80)
                             .background(Color.secondary)
                             .foregroundColor(.white)
                             .cornerRadius(10)
@@ -77,7 +78,7 @@ struct ButeykoBreathingView: View {
                         Text(viewModel.isBreathHeld ? "Stop Control Pause" : "Start Control Pause")
                             .font(.headline)
                             .padding()
-                            .frame(width: 150)
+                            .frame(width: 150, height: 80)
                             .background(viewModel.isBreathHeld ? Color("powderBlue") : Color.gray)
                             .foregroundColor(.white)
                             .cornerRadius(10)
@@ -91,3 +92,10 @@ struct ButeykoBreathingView: View {
         }
     }
 }
+
+
+#Preview {
+    ButeykoBreathingView()
+}
+
+

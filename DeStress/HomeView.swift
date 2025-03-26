@@ -18,7 +18,7 @@ struct HomeView: View {
                 Color("appBackground")
                     .blur(radius: 20)
                     .edgesIgnoringSafeArea(.all)
-
+    
                 VStack(spacing: 20) {
                     Spacer()
 
@@ -56,7 +56,7 @@ struct HomeView: View {
                 .padding(.bottom, 50)
             }
         }
-        .navigationBarHidden(true) 
+        .navigationBarHidden(true)
     }
 }
 

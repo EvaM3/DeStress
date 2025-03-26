@@ -81,6 +81,7 @@ struct FourSevenEightBreathingView: View {
                 }
                 .accessibilityIdentifier("StartStopButton")
             }
+          
             .background(
                 Color("appBackground")
                     .scaledToFill()
