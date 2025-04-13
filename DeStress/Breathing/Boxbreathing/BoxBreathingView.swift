@@ -103,7 +103,12 @@ struct BoxBreathingView: View {
                    
                 }
                 .padding()
-                .background(Color("appBackground").edgesIgnoringSafeArea(.all))
+            
+                .background(
+                    backgroundColorView()
+                        .scaledToFill()
+                        .edgesIgnoringSafeArea(.all)
+                )
 
                 // Detail View
                 if isShowingDetail {

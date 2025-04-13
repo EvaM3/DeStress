@@ -12,7 +12,7 @@ struct BreathingExerciseView: View {
 
     var body: some View {
         ZStack {
-            Color("appBackground")
+            backgroundColorView()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
 

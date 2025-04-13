@@ -23,7 +23,11 @@ struct GratitudeGoalsView: View {
                 .padding()
             }
             .navigationBarTitle("Gratitude & Goals", displayMode: .inline)
-            .background(Color("appBackground").edgesIgnoringSafeArea(.all))
+            .background(
+                backgroundColorView()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all))
+            
             .alert(isPresented: $showSuccessAlert) {
                 Alert(title: Text("🖐️ High Five!"),
                       message: Text("You can do anything you put your mind to."),
@@ -100,10 +104,10 @@ struct SectionView<T: Identifiable>: View {
             
             VStack(alignment: .leading) {
                 Text("New \(title)")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
+                    .font(.title2)
+                    .foregroundColor(.white)
                 TextEditor(text: $newTitle)
-                    .frame(height: 60)
+                    .frame(height: 70)
                     .padding(4)
                     .background(Color(UIColor.secondarySystemBackground))
                     .cornerRadius(8)

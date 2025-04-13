@@ -83,7 +83,7 @@ struct FourSevenEightBreathingView: View {
             }
           
             .background(
-                Color("appBackground")
+                backgroundColorView()
                     .scaledToFill()
                     .edgesIgnoringSafeArea(.all)
             )

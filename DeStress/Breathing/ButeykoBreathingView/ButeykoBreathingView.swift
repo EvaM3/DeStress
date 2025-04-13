@@ -25,7 +25,7 @@ struct ButeykoBreathingView: View {
 
     var mainView: some View {
         ZStack {
-            Color("appBackground")
+            backgroundColorView()
                 .scaledToFill()
                 .edgesIgnoringSafeArea(.all)
           

@@ -7,9 +7,11 @@ import SwiftUI
 import SwiftData
 
 
-let captionText: String = "Welcome to ZenBreath. The app helps you to calm down, relax, and focus. Practice mindfulness. Stay calm and focused."
+
 
 struct ContentView: View {
+    
+    let captionText: String = "Welcome to ZenBreath. The app helps you to calm down, relax, and focus. Practice mindfulness. Stay calm and focused."
     
     @Environment(\.modelContext) private var context: ModelContext
     @StateObject private var viewModel: BoxBreathingViewModel
@@ -27,7 +29,7 @@ struct ContentView: View {
 
     var body: some View {
         ZStack {
-            Image("BG")
+            Image("LandingBG")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .edgesIgnoringSafeArea(.all)
