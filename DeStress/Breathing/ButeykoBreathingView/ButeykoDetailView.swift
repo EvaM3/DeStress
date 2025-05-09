@@ -14,7 +14,7 @@ struct ButeykoDetailView: View {
                 Text("Buteyko Breathing Technique Details")
                     .font(.largeTitle.weight(.bold))
                     .padding()
-                    .foregroundColor(.primary)
+                    .foregroundColor(.powderBlue)
 
                 Text("""
                     The Buteyko Breathing Method is a breathing technique that aims to normalize breathing patterns by reducing hyperventilation and increasing carbon dioxide levels in the blood. This can help improve overall health, especially for people with respiratory conditions like asthma or anxiety disorders.
@@ -32,7 +32,11 @@ struct ButeykoDetailView: View {
                     .foregroundColor(.black)
             }
             .padding()
-            .background(Color.white)
+    
+            .background(
+                backgroundColorView()
+                    .scaledToFill()
+                    .edgesIgnoringSafeArea(.all))
             .cornerRadius(20)
             .shadow(radius: 20)
             .padding()

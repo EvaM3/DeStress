@@ -145,7 +145,7 @@ class BreathingExerciseViewModel: ObservableObject {
         stopSpeech()
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-AU")
-        utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.9
+       // utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.9
         synthesizer.speak(utterance)
     }
     

@@ -21,7 +21,6 @@ struct FourSevenEightDetailView: View {
                        Text("4-7-8 Breathing Technique Details")
                            .font(.largeTitle)
                            .fontWeight(.bold)
-                           .foregroundColor(Color("appBackground"))
                            .padding()
 
                        Text("""
@@ -48,7 +47,10 @@ struct FourSevenEightDetailView: View {
                            Text("Close")
                                .font(.title2)
                                .padding()
-                               .background(Color("appBackground"))
+                               .background(
+                                   backgroundColorView()
+                                       .scaledToFill()
+                                       .edgesIgnoringSafeArea(.all))
                                .foregroundColor(.white)
                                .cornerRadius(10)
                        }

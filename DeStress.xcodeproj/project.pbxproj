@@ -48,6 +48,7 @@
 		A0DB9A072D314E1C00534BA3 /* BreathingStatistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DB9A062D314E1C00534BA3 /* BreathingStatistic.swift */; };
 		A0DD899F2CDD6A0D00E0AC0D /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0DD899E2CDD6A0D00E0AC0D /* Extension+String.swift */; };
 		A0E746B52D36A40600799CBF /* GoalItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E746B42D36A40600799CBF /* GoalItemView.swift */; };
+		A0F00A2E2DC644AE0005C20F /* ControlPauseRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F00A2D2DC644AE0005C20F /* ControlPauseRecord.swift */; };
 		A0F875162CE941C2005CF3B5 /* FourSevenEightBreathingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F875152CE941C2005CF3B5 /* FourSevenEightBreathingViewModel.swift */; };
 		A0F875192CE94A51005CF3B5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F875182CE94A51005CF3B5 /* DetailView.swift */; };
 		A0F8751B2CE94C7C005CF3B5 /* BoxBreathingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F8751A2CE94C7C005CF3B5 /* BoxBreathingViewModel.swift */; };
@@ -121,6 +122,7 @@
 		A0DB9A062D314E1C00534BA3 /* BreathingStatistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreathingStatistic.swift; sourceTree = "<group>"; };
 		A0DD899E2CDD6A0D00E0AC0D /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 		A0E746B42D36A40600799CBF /* GoalItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalItemView.swift; sourceTree = "<group>"; };
+		A0F00A2D2DC644AE0005C20F /* ControlPauseRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlPauseRecord.swift; sourceTree = "<group>"; };
 		A0F875152CE941C2005CF3B5 /* FourSevenEightBreathingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourSevenEightBreathingViewModel.swift; sourceTree = "<group>"; };
 		A0F875182CE94A51005CF3B5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		A0F8751A2CE94C7C005CF3B5 /* BoxBreathingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxBreathingViewModel.swift; sourceTree = "<group>"; };
@@ -308,6 +310,7 @@
 				A0F875212CE9507B005CF3B5 /* ButeykoBreathingViewModel.swift */,
 				A0F875232CE950D9005CF3B5 /* ButeykoDetailView.swift */,
 				A075806C2D39D77400358988 /* ButeykoStatisticsView.swift */,
+				A0F00A2D2DC644AE0005C20F /* ControlPauseRecord.swift */,
 			);
 			path = ButeykoBreathingView;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0DB9A072D314E1C00534BA3 /* BreathingStatistic.swift in Sources */,
+				A0F00A2E2DC644AE0005C20F /* ControlPauseRecord.swift in Sources */,
 				A0149EEE2C07C9DE00567BAE /* SettingsView.swift in Sources */,
 				A0F8751F2CE94DC2005CF3B5 /* StatisticsView.swift in Sources */,
 				A02844102C41936200542E31 /* BreathingSettingsModel.swift in Sources */,

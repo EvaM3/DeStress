@@ -1,6 +1,9 @@
 import SwiftUI
+import SwiftData
 
 struct ButeykoBreathingView: View {
+  
+    @Environment(\.modelContext) private var modelContext
     @StateObject private var viewModel = ButeykoBreathingViewModel()
 
     var body: some View {
@@ -10,7 +13,8 @@ struct ButeykoBreathingView: View {
                     Label("Breathing", systemImage: "lungs.fill")
                 }
             
-            ButeykoStatisticsView()
+            ButeykoStatisticsView(viewModel: viewModel)
+
                 .tabItem {
                     Label("CP History", systemImage: "chart.bar")
                 }
@@ -20,7 +24,12 @@ struct ButeykoBreathingView: View {
                     Label("Learn More", systemImage: "info.circle")
                 }
         }
-        .accentColor(.white)
+        .accentColor(.gray)
+        
+        .task {
+                   viewModel.setContext(modelContext)
+                   await viewModel.fetchSavedHistory()
+     }
     }
 
     var mainView: some View {
@@ -94,8 +103,6 @@ struct ButeykoBreathingView: View {
 }
 
 
-#Preview {
-    ButeykoBreathingView()
-}
+
 
 

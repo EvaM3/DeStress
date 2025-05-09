@@ -11,21 +11,21 @@ import SwiftData
 @main
 
 struct DeStressApp: App {
-    init() {
-        let appearance = UINavigationBarAppearance()
-
-        appearance.configureWithTransparentBackground()
-        appearance.backgroundColor = .clear
-        appearance.backgroundEffect = nil
-
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-
-        UINavigationBar.appearance().tintColor = .white
-    }
+//    init() {
+//        let appearance = UINavigationBarAppearance()
+//
+//        appearance.configureWithTransparentBackground()
+//        appearance.backgroundColor = .clear
+//        appearance.backgroundEffect = nil
+//
+//        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+//        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+//
+//        UINavigationBar.appearance().standardAppearance = appearance
+//        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+//
+//        UINavigationBar.appearance().tintColor = .white
+//    }
 
     
     var body: some Scene {
@@ -33,9 +33,18 @@ struct DeStressApp: App {
                 NavigationStack {
                     ContentView()
                 }
-                   .tint(.white)
-                   .modelContainer(for: [BreathingStatistic.self])
+                .tint(.white)
             }
+            .modelContainer(
+                try! ModelContainer(
+                    for: BreathingStatistic.self, ControlPauseRecord.self,
+                    configurations: 
+                        ModelConfiguration("buteyko.store") 
+                    
+                )
+            )
+
+
         }
     }
 

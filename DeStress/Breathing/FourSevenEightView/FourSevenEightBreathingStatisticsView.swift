@@ -104,9 +104,9 @@ struct FourSevenEightBreathingStatisticsView: View {
             Spacer()
         }
         .background(
-            Color("appBackground")
-                .edgesIgnoringSafeArea(.all)
-        )
+            backgroundColorView()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all))
         .onAppear {
             Task {
                 await statisticsModel.saveStatistics(totalCycles: viewModel.totalCycles, totalDuration: viewModel.totalDuration, averageCycleDuration: viewModel.averageCycleDuration)

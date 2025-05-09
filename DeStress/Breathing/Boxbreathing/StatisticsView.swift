@@ -56,7 +56,11 @@ struct StatisticsView: View {
                 }
                 .frame(height: 250)
                 .padding()
-                .background(Color("appBackground").opacity(0.9))
+                //.background(Color("appBackground").opacity(0.9))
+                .background(
+                    backgroundColorView()
+                        .scaledToFill()
+                        .edgesIgnoringSafeArea(.all))
                 .cornerRadius(10)
             }
             
@@ -67,7 +71,10 @@ struct StatisticsView: View {
                 }
         .navigationTitle("Statistics")
         .navigationBarTitleDisplayMode(.inline)
-        .background(Color("appBackground").edgesIgnoringSafeArea(.all))
+        .background(
+            backgroundColorView()
+                .scaledToFill()
+                .edgesIgnoringSafeArea(.all))
     }
     
 }

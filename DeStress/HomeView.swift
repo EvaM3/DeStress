@@ -11,6 +11,7 @@ import SwiftData
 
 struct HomeView: View {
   @Environment(\.modelContext) private var context
+    @Environment(\.modelContext) private var modelContext
 
     var body: some View {
         NavigationStack {
@@ -45,6 +46,8 @@ struct HomeView: View {
                     NavigationLink(destination: ButeykoBreathingView()) {
                         HomeButton(title: "Buteyko Breathing Method", systemImage: "waveform.path.ecg")
                     }
+
+
                     .padding(.bottom, 40)
                     
                     // MARK: Goals and gratitude

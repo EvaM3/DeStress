@@ -2,7 +2,7 @@
 //  ButeykoBreathingViewModel.swift
 //  DeStress
 //
-//  Created by Eva Sira Madarasz on 12/11/2024.
+//  Created by Eva Madarasz on 12/11/2024.
 //
 
 import SwiftUI
@@ -16,12 +16,38 @@ class ButeykoBreathingViewModel: ObservableObject {
     @Published var isBreathHeld = false
     @Published var controlPause = 0
     @Published var isMeasuringCP = false
-    @Published var controlPauseHistory: [Int] = []
-
+    
+    @Published var controlPauseHistory: [ControlPauseRecord] = []
+    
     private var timer: Timer?
     private let synthesizer = AVSpeechSynthesizer()
+   
+   
+    private var modelContext: ModelContext?
 
+       func setContext(_ context: ModelContext) {
+           self.modelContext = context
+       }
   
+    @MainActor
+    func fetchSavedHistory() async {
+        guard let context = modelContext else {
+            print("❌ modelContext is nil — cannot fetch")
+            return
+        }
+
+        print("🔄 Fetching CP history...")
+        let descriptor = FetchDescriptor<ControlPauseRecord>(sortBy: [SortDescriptor(\.timestamp)])
+        do {
+            let results = try context.fetch(descriptor)
+            print("✅ Fetched \(results.count) CP records")
+            controlPauseHistory = results
+        } catch {
+            print("❌ Error fetching CP history: \(error)")
+        }
+    }
+
+
     func startCountdown() {
         stopTimers() // No overlapping timers
         countdown = 5
@@ -53,10 +79,24 @@ class ButeykoBreathingViewModel: ObservableObject {
     func stopControlPauseMeasurement() {
         stopTimers()
         isMeasuringCP = false
-        controlPauseHistory.append(controlPause)
-        controlPause = 0 // Reset for the next measurement
         speak("Breathe normally")
+
+        let record = ControlPauseRecord(duration: controlPause)
+        modelContext?.insert(record)
+
+        do {
+            try modelContext?.save()
+        } catch {
+            print("❌ Failed to save CP record: \(error)")
+        }
+
+        controlPause = 0
+
+        Task {
+            await fetchSavedHistory()
+        }
     }
+
 
    
     func stopExercise() {
@@ -76,12 +116,14 @@ class ButeykoBreathingViewModel: ObservableObject {
 
     // Speak the provided text
     private func speak(_ text: String) {
-        synthesizer.stopSpeaking(at: .immediate)
-        let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-        utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.7
-        utterance.pitchMultiplier = 1.1
-        synthesizer.speak(utterance)
+        DispatchQueue.main.async {
+            self.synthesizer.stopSpeaking(at: .immediate)
+            let utterance = AVSpeechUtterance(string: text)
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-AU")
+            utterance.rate = AVSpeechUtteranceDefaultSpeechRate * 0.7
+            utterance.pitchMultiplier = 1.1
+            self.synthesizer.speak(utterance)
+        }
     }
 
   
