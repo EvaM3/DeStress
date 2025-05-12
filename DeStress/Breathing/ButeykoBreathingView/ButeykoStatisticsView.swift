@@ -63,12 +63,29 @@ struct ButeykoStatisticsView: View {
                                        .cornerRadius(8)
                                        .padding(.horizontal)
                                }
+                               
+                               Button(role: .destructive) {
+                                   Task {
+                                       await viewModel.clearHistory()
+                                   }
+                               } label: {
+                                   Label("Clear History", systemImage: "trash")
+                                       .font(.body.bold())
+                                       .padding()
+                                       .background(Color.red.opacity(0.8))
+                                       .foregroundColor(.white)
+                                       .cornerRadius(10)
+                               }
+                               .padding(.top)
+
                            }
+                           Spacer()
+                         
                        }
                        .frame(maxHeight: 200)
                    }
                }
-               .padding()
+               .padding(.leading, 20)
            }
            .task {
                await viewModel.fetchSavedHistory()

@@ -47,6 +47,27 @@ class ButeykoBreathingViewModel: ObservableObject {
         }
     }
 
+    @MainActor
+    func clearHistory() async {
+        guard let context = modelContext else {
+            print("❌ No context available.")
+            return
+        }
+
+        let descriptor = FetchDescriptor<ControlPauseRecord>()
+        do {
+            let records = try context.fetch(descriptor)
+            for record in records {
+                context.delete(record)
+            }
+            try context.save()
+            await fetchSavedHistory()
+            print("🗑️ All Control Pause records deleted.")
+        } catch {
+            print("❌ Failed to clear CP history: \(error)")
+        }
+    }
+
 
     func startCountdown() {
         stopTimers() // No overlapping timers
