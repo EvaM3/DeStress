@@ -13,19 +13,11 @@ import SwiftData
 
 
 struct BoxBreathingView: View {
-    
     @Environment(\.modelContext) private var modelContext
-          @StateObject private var viewModel: BoxBreathingViewModel
-
-          init(context: ModelContext) {
-              _viewModel = StateObject(wrappedValue: BoxBreathingViewModel(context: context))
-          }
-    
-       @State private var isShowingDetail: Bool = false
-    
-
     @Query(sort: \BreathingStatistic.day, order: .reverse) private var statistics: [BreathingStatistic]
-
+    
+    @StateObject private var viewModel = BoxBreathingViewModel()
+    @State private var isShowingDetail = false
 
     var body: some View {
         NavigationStack {
@@ -33,10 +25,7 @@ struct BoxBreathingView: View {
                 VStack {
                     HStack {
                         Spacer()
-
                         VStack {
-                            // Info Button
-                        
                             Button(action: {
                                 withAnimation {
                                     isShowingDetail.toggle()
@@ -49,7 +38,6 @@ struct BoxBreathingView: View {
                                     .accessibilityIdentifier("infoButton")
                             }
 
-                            // Statistics Button
                             NavigationLink(destination: StatisticsView()) {
                                 Image(systemName: "chart.bar")
                                     .font(.title)
@@ -64,7 +52,7 @@ struct BoxBreathingView: View {
 
                     Spacer()
 
-    // MARK: Main Content
+                    // MARK: Main Content
                     Text("Cycle: \(viewModel.cycleCount)")
                         .font(.headline)
                         .foregroundColor(.white)
@@ -92,7 +80,9 @@ struct BoxBreathingView: View {
                     Spacer()
 
                     Button(action: {
-                        viewModel.toggleBreathing()
+                        viewModel.toggleBreathing {
+                            saveCycleForToday()
+                        }
                     }) {
                         Text(viewModel.isBreathing ? "Stop Exercise" : "Start Exercise")
                             .foregroundColor(.white)
@@ -100,17 +90,14 @@ struct BoxBreathingView: View {
                             .background(Color("powderBlue"))
                             .cornerRadius(10)
                     }
-                   
                 }
                 .padding()
-            
                 .background(
                     backgroundColorView()
                         .scaledToFill()
                         .edgesIgnoringSafeArea(.all)
                 )
 
-                // Detail View
                 if isShowingDetail {
                     DetailView(isShowingDetail: $isShowingDetail)
                         .transition(.opacity)
@@ -119,4 +106,32 @@ struct BoxBreathingView: View {
             }
         }
     }
+
+    // MARK: - Data Saving
+    private func saveCycleForToday() {
+        let today = getCurrentDay()
+
+        if let existing = statistics.first(where: { $0.day == today }) {
+            existing.cycles += 1
+            print("Updated existing record for \(today): \(existing.cycles)")
+        } else {
+            let newStat = BreathingStatistic(day: today, cycles: 1)
+            modelContext.insert(newStat)
+            print("Inserted new stat for \(today)")
+        }
+
+        do {
+            try modelContext.save()
+            print("Saved model context.")
+        } catch {
+            print("Error saving: \(error.localizedDescription)")
+        }
+    }
+
+    private func getCurrentDay() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEE"
+        return formatter.string(from: Date())
+    }
 }
+

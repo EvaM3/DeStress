@@ -37,7 +37,7 @@ struct HomeView: View {
                     .padding(.bottom, 40)
                     
                     // MARK: Box breathing
-                    NavigationLink(destination: BoxBreathingView(context: context)) {
+                    NavigationLink(destination: BoxBreathingView()) {
                         HomeButton(title: "Box breathing", systemImage: "square.grid.2x2")
                     }
                     .padding(.bottom, 40)

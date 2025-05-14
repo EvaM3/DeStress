@@ -14,12 +14,8 @@ struct ContentView: View {
     let captionText: String = "Welcome to ZenBreath. The app helps you to calm down, relax, and focus. Practice mindfulness. Stay calm and focused."
     
     @Environment(\.modelContext) private var context: ModelContext
-    @StateObject private var viewModel: BoxBreathingViewModel
     @Query(sort: \BreathingStatistic.day, order: .reverse) private var statistics: [BreathingStatistic]
 
-     init() {
-         _viewModel = StateObject(wrappedValue: BoxBreathingViewModel(context: Environment(\.modelContext).wrappedValue))
-     }
     
     @State private var caption: String = ""
     @State private var showHomeView = false

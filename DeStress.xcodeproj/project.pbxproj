@@ -26,7 +26,6 @@
 		A02448F42D3A7D2600509BC6 /* InfoOrStatButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02448F32D3A7D2600509BC6 /* InfoOrStatButton.swift */; };
 		A02844102C41936200542E31 /* BreathingSettingsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A028440F2C41936200542E31 /* BreathingSettingsModel.swift */; };
 		A02844122C41C3D700542E31 /* RippleEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = A02844112C41C3D700542E31 /* RippleEffect.swift */; };
-		A032C9FF2C35BFE40094DB07 /* Vortex in Frameworks */ = {isa = PBXBuildFile; productRef = A032C9FE2C35BFE40094DB07 /* Vortex */; };
 		A037D6072C46C7D40087A812 /* DeStressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A037D6062C46C7D40087A812 /* DeStressButton.swift */; };
 		A044D5922C8BA6CF00B323E0 /* ButeykoBreathingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044D5912C8BA6CF00B323E0 /* ButeykoBreathingView.swift */; };
 		A0463BB92D510E6400F333A9 /* FourSevenEightBreathingStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0463BB82D510E6400F333A9 /* FourSevenEightBreathingStatisticsView.swift */; };
@@ -138,7 +137,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A032C9FF2C35BFE40094DB07 /* Vortex in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,7 +330,6 @@
 			);
 			name = DeStress;
 			packageProductDependencies = (
-				A032C9FE2C35BFE40094DB07 /* Vortex */,
 			);
 			productName = DeStress;
 			productReference = A0149ED82C07C83700567BAE /* DeStress.app */;
@@ -407,7 +404,6 @@
 			);
 			mainGroup = A0149ECF2C07C83700567BAE;
 			packageReferences = (
-				A032C9FD2C35BFE40094DB07 /* XCRemoteSwiftPackageReference "Vortex" */,
 			);
 			productRefGroup = A0149ED92C07C83700567BAE /* Products */;
 			projectDirPath = "";
@@ -828,25 +824,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		A032C9FD2C35BFE40094DB07 /* XCRemoteSwiftPackageReference "Vortex" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/twostraws/Vortex";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		A032C9FE2C35BFE40094DB07 /* Vortex */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A032C9FD2C35BFE40094DB07 /* XCRemoteSwiftPackageReference "Vortex" */;
-			productName = Vortex;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A0149ED02C07C83700567BAE /* Project object */;
 }
